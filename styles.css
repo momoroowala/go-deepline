@@ -3799,15 +3799,7 @@ footer {
     text-transform: uppercase;
 }
 
-/* ========== FIX 6: will-change for infinite animation elements ========== */
-.animated-grid {
-    will-change: transform;
-}
-
-.hero-ambient {
-    will-change: transform;
-}
-
+/* ========== FIX 6: will-change only where needed ========== */
 .status-dot {
     will-change: transform;
 }

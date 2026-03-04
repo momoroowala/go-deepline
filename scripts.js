@@ -39,8 +39,7 @@ document.querySelectorAll('.problem-card, .service-card, .tool-card').forEach(fu
 });
 
 // ========== DEBOUNCED SCROLL (passive) ==========
-var heroGrid = document.querySelector('.hero .animated-grid');
-var heroAmbient = document.querySelector('.hero .hero-ambient');
+// Nav scroll - lightweight, no parallax transforms
 var navEl = document.querySelector('nav');
 var scrollTicking = false;
 window.addEventListener('scroll', function() {
@@ -50,11 +49,6 @@ window.addEventListener('scroll', function() {
                 navEl.classList.add('scrolled');
             } else {
                 navEl.classList.remove('scrolled');
-            }
-            var sy = window.scrollY;
-            if (sy < 1200) {
-                if (heroGrid) heroGrid.style.transform = 'translateY(' + (sy * 0.5) + 'px)';
-                if (heroAmbient) heroAmbient.style.transform = 'translateY(' + (sy * 0.35) + 'px)';
             }
             scrollTicking = false;
         });

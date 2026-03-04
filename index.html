@@ -294,19 +294,11 @@
             left: 0;
             right: 0;
             bottom: 0;
-            height: 200%;
             opacity: 0.06;
             background-image: 
                 linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
             background-size: 30px 30px;
-            animation: gridMove 20s linear infinite;
-            will-change: transform;
-        }
-
-        @keyframes gridMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(30px, 30px); }
         }
 
         .hero-ambient {
@@ -315,9 +307,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            height: 200%;
             overflow: hidden;
-            will-change: transform;
             mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 70%);
             -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 30%, transparent 70%);
         }
@@ -335,7 +325,7 @@
                 radial-gradient(circle 1px at 15% 70%, rgba(27,154,170,0.2) 0%, transparent 1px),
                 radial-gradient(circle 1px at 90% 25%, rgba(27,154,170,0.3) 0%, transparent 1px),
                 radial-gradient(circle 1px at 45% 80%, rgba(27,154,170,0.25) 0%, transparent 1px);
-            animation: ambientPulse 6s ease-in-out infinite alternate;
+            opacity: 0.7;
         }
 
         .hero-ambient::after {
@@ -348,12 +338,7 @@
                 radial-gradient(circle 1px at 75% 55%, rgba(148,163,184,0.2) 0%, transparent 1px),
                 radial-gradient(circle 1px at 40% 25%, rgba(148,163,184,0.15) 0%, transparent 1px),
                 radial-gradient(circle 1px at 85% 70%, rgba(148,163,184,0.2) 0%, transparent 1px);
-            animation: ambientPulse 6s ease-in-out infinite alternate-reverse;
-        }
-
-        @keyframes ambientPulse {
-            0% { opacity: 0.4; }
-            100% { opacity: 1; }
+            opacity: 0.7;
         }
 
         /* Navigation */
@@ -536,11 +521,10 @@
         }
 
         .dashboard-mockup {
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(15, 11, 46, 0.85);
             border-radius: 12px;
             padding: 24px;
             border: 1px solid rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
             position: relative;
             overflow: hidden;
         }
