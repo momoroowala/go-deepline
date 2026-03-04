@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DeepLine Operations - Revenue Recovery for Distributors</title>
-    <meta name="description" content="Stop losing customers you already won. DeepLine Operations helps distributors find and reactivate dormant accounts, recovering 20-30% of lost revenue through data analytics. Free 48-hour diagnostic.">
+    <title>DeepLine Operations - Operations Automation for Distributors</title>
+    <meta name="description" content="Every manual process is revenue walking out the door. DeepLine Operations automates distributor operations — quoting, routing, customer recovery, and dashboards — so you stop bleeding revenue.">
     <meta name="author" content="Mo Roowala">
     <link rel="canonical" href="https://deeplineop.ai/">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="DeepLine Operations - Revenue Recovery for Distributors">
-    <meta property="og:description" content="Stop losing customers you already won. We help distributors find and reactivate dormant accounts, recovering 20-30% of lost revenue through data analytics.">
+    <meta property="og:title" content="DeepLine Operations - Operations Automation for Distributors">
+    <meta property="og:description" content="Every manual process is revenue walking out the door. We automate distributor operations to stop bleeding revenue.">
     <meta property="og:image" content="https://deeplineop.ai/logo.png">
     <meta property="og:url" content="https://deeplineop.ai">
     <meta property="og:type" content="website">
@@ -18,8 +18,8 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DeepLine Operations - Revenue Recovery for Distributors">
-    <meta name="twitter:description" content="Stop losing customers you already won. We help distributors recover dormant accounts and prevent customer churn.">
+    <meta name="twitter:title" content="DeepLine Operations - Operations Automation for Distributors">
+    <meta name="twitter:description" content="Every manual process is revenue walking out the door. We automate distributor operations to stop bleeding revenue.">
     <meta name="twitter:image" content="https://deeplineop.ai/logo.png">
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -124,9 +124,9 @@
       },
       "offers": {
         "@type": "Offer",
-        "name": "Free Customer Diagnostic",
-        "description": "48-hour analysis showing dormant customers and revenue at risk",
-        "price": "0",
+        "name": "$500 Operations Diagnostic",
+        "description": "Complete operations audit: customer health analysis, workflow audit, 90-day automation roadmap, data cleanup plan, and ROI projections",
+        "price": "500",
         "priceCurrency": "USD"
       }
     }
@@ -1822,8 +1822,9 @@
             letter-spacing: 0.5px;
         }
 
-        /* Route Optimization Map */
-        .route-map {
+        /* Route Optimization Map (service card) */
+        .service-preview > .route-map,
+        .route-map#routeMap {
             background: #0f172a;
             height: 280px;
             position: relative;
@@ -1886,7 +1887,6 @@
             stroke-linejoin: round;
             stroke-dasharray: 1000;
             stroke-dashoffset: 1000;
-            filter: drop-shadow(0 0 4px rgba(27,154,170,0.6));
         }
 
         .route-path-active.drawing {
@@ -1945,7 +1945,6 @@
             font-size: 16px;
             opacity: 0;
             transition: opacity 0.3s ease;
-            filter: drop-shadow(0 0 6px rgba(27,154,170,0.8));
             transform: scaleX(-1);
         }
 
@@ -3636,6 +3635,19 @@
             font-size: 14px;
         }
 
+        .tool-funnel-link {
+            display: block;
+            margin-top: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--muted-indigo);
+            transition: color 0.3s ease;
+        }
+
+        .tool-card:hover .tool-funnel-link {
+            color: var(--teal-accent);
+        }
+
         /* Final CTA */
         .final-cta {
             background: var(--deep-purple-navy);
@@ -4262,6 +4274,18 @@
         .rev-tl-stat-val { font-size: 16px; font-weight: 700; display: block; }
         .rev-tl-stat-lbl { font-size: 9px; color: #94a3b8; text-transform: uppercase; }
 
+        /* Performance: Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            .animated-grid { animation: none; }
+            .hero-ambient::before, .hero-ambient::after { animation: none; }
+            section { opacity: 1; transform: none; }
+        }
+
     </style>
 </head>
 <body>
@@ -4277,7 +4301,7 @@
                 <li><a href="#services">Services</a></li>
                 <li><a href="#case-studies">Success Stories</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact" class="nav-cta">Free Diagnostic</a></li>
+                <li><a href="#contact" class="nav-cta">$500 Diagnostic</a></li>
             </ul>
             <button class="mobile-menu">☰</button>
         </div>
@@ -4290,9 +4314,9 @@
         <div class="container">
             <div class="hero-grid">
                 <div class="hero-content">
-                    <h1>Stop Losing Customers You Already Won.</h1>
-                    <p class="hero-subtitle">Most distributors lose 15-25% of their customers every year. The ones who survive are automating everything from quoting to route planning to customer recovery. We build those systems.</p>
-                    <a href="#contact" class="hero-cta">Get Your Free Diagnostic</a>
+                    <h1>Every Manual Process Is Revenue Walking Out the Door.</h1>
+                    <p class="hero-subtitle">Manual quoting loses deals. No customer tracking bleeds revenue. Bad routes waste money. We automate your operations — quoting, routing, customer recovery, dashboards — so you stop bleeding revenue and start growing.</p>
+                    <a href="#contact" class="hero-cta">Get Your $500 Operations Diagnostic</a>
                 </div>
                 
                 <div class="hero-dashboard">
@@ -4359,8 +4383,8 @@
                             </div>
                         </div>
                     </div>
-                    <h3>Customers Disappear Without Warning</h3>
-                    <p>They stop ordering, nobody notices for months, revenue silently drains. By the time you realize a customer is gone, they've moved on to your competitor.</p>
+                    <h3>No Customer Tracking = Silent Churn</h3>
+                    <p>Without automated health monitoring, customers stop ordering and nobody notices for months. Revenue silently drains. By the time you realize a customer is gone, reactivation costs 5x more.</p>
                 </div>
                 <div class="problem-card">
                     <div class="problem-visual">
@@ -4373,8 +4397,8 @@
                             <div class="broken-line"></div>
                         </div>
                     </div>
-                    <h3>Your Team Is Drowning in Manual Work</h3>
-                    <p>Quoting takes hours. Route planning is guesswork. Your best people spend more time on spreadsheets than on customers. Every manual process is revenue you're not earning.</p>
+                    <h3>Manual Quoting = Lost Deals</h3>
+                    <p>Every quote that takes hours is a deal your competitor closes first. Manual route planning wastes fuel and misses delivery windows. Your best people are buried in spreadsheets instead of growing revenue.</p>
                 </div>
                 <div class="problem-card">
                     <div class="problem-visual">
@@ -4388,8 +4412,8 @@
                             <div class="question-mark">?</div>
                         </div>
                     </div>
-                    <h3>You Can't See What's Actually Happening</h3>
-                    <p>No real-time view of operations. No early warning when customers slip. No way to know which routes are profitable. You're making decisions based on last month's numbers, not today's reality.</p>
+                    <h3>No Visibility = Revenue Losses You Can't See</h3>
+                    <p>No real-time view of operations means problems become revenue losses before you spot them. Without dashboards, you can't see which routes lose money, which customers are slipping, or where profit leaks.</p>
                 </div>
             </div>
         </div>
@@ -4398,12 +4422,12 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 style="text-align: center; color: var(--dark-ink);">What We Build For Distributors</h2>
+            <h2 style="text-align: center; color: var(--dark-ink);">Operations Automation That Pays for Itself</h2>
 
             <!-- Revenue Recovery Group -->
             <div class="services-group-header">
                 <h3>Revenue Recovery</h3>
-                <p>Find dormant customers, bring them back, and prevent future churn</p>
+                <p>Automate customer tracking so you stop losing revenue to silent churn</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
@@ -4580,7 +4604,7 @@
             <!-- Operations & Automation Group -->
             <div class="services-group-header">
                 <h3>Operations & Automation</h3>
-                <p>Eliminate manual work, optimize logistics, and see your entire operation in real time</p>
+                <p>Automate the manual work that bleeds revenue — quoting, routing, visibility</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
@@ -4651,7 +4675,7 @@
                             </svg>
                         </div>
                         <h3>Automated Quoting & Pricing</h3>
-                        <p class="service-description">Stop spending hours on quotes. Our system pulls your pricing rules, customer history, and inventory levels to generate accurate quotes in seconds. Handles tiered pricing, volume discounts, and customer-specific rates.</p>
+                        <p class="service-description">Every slow quote is a deal your competitor closes first. Our system generates accurate quotes in seconds — not hours — so you never lose a deal because a quote took too long.</p>
                         <ul class="service-features">
                             <li>Customer-specific pricing with historical discount logic</li>
                             <li>Real-time inventory check during quote generation</li>
@@ -4694,7 +4718,7 @@
                             </svg>
                         </div>
                         <h3>Delivery Route Optimization</h3>
-                        <p class="service-description">Reduce fuel costs and delivery times. Our route planning tools optimize your fleet's daily routes based on order priority, location clusters, and time windows. Most distributors save 15-25% on fuel within 60 days.</p>
+                        <p class="service-description">Unoptimized routes waste fuel, miss delivery windows, and lose customers. Our route optimization cuts fuel costs 15-25% and frees hours per day — time your drivers can spend on revenue-generating stops.</p>
                         <ul class="service-features">
                             <li>Daily route optimization for your delivery fleet</li>
                             <li>Priority-based delivery scheduling (VIP accounts first)</li>
@@ -4704,19 +4728,22 @@
                         </ul>
                     </div>
                     <div class="service-preview">
-                        <div class="revenue-timeline" id="revenueTimeline">
-                            <div class="rev-tl-header">
-                                <span style="font-size:12px;font-weight:600;color:#cbd5e1;">Route Optimization Savings</span>
-                                <span style="font-size:10px;color:#64748b;">12-Month View</span>
+                        <div class="route-map" id="routeMap">
+                            <div class="route-map-grid"></div>
+                            <div id="stateOutline" class="state-outline"></div>
+                            <svg id="routeSvg" class="route-svg"></svg>
+                            <div id="routeStops" class="route-stops"></div>
+                            <div id="routeTruck" class="route-truck">&#x1F69A;</div>
+                            <div class="route-header-bar">
+                                <span id="routeTitle" class="route-title">Route NJ-7 | North Jersey</span>
+                                <span id="routeBadge" class="route-badge">Optimizing...</span>
                             </div>
-                            <div class="rev-tl-bars" id="revTlBars">
-                            </div>
-                            <div class="rev-tl-annotations" id="revTlAnnotations">
-                            </div>
-                            <div class="rev-tl-stats">
-                                <div class="rev-tl-stat"><span class="rev-tl-stat-val" style="color:#ef4444;" id="revBefore">$1.8M</span><span class="rev-tl-stat-lbl">Before</span></div>
-                                <div class="rev-tl-stat"><span class="rev-tl-stat-val" style="color:#22c55e;" id="revAfter">$2.4M</span><span class="rev-tl-stat-lbl">After</span></div>
-                                <div class="rev-tl-stat"><span class="rev-tl-stat-val" style="color:#1B9AAA;" id="revLift">+33%</span><span class="rev-tl-stat-lbl">Revenue Lift</span></div>
+                            <div class="route-stats-panel">
+                                <div class="route-stat"><span class="route-stat-val" id="rStops">0</span><span class="route-stat-lbl">Stops</span></div>
+                                <div class="route-stat"><span class="route-stat-val savings" id="rMiles">—</span><span class="route-stat-lbl">Miles Saved</span></div>
+                                <div class="route-stat"><span class="route-stat-val savings" id="rTime">—</span><span class="route-stat-lbl">Hours Saved</span></div>
+                                <div class="route-stat"><span class="route-stat-val savings" id="rGas">—</span><span class="route-stat-lbl">Fuel Savings</span></div>
+                                <div class="route-stat"><span class="route-stat-val" id="rTimeSaved">—</span><span class="route-stat-lbl">Time Saved</span></div>
                             </div>
                         </div>
                     </div>
@@ -4737,7 +4764,7 @@
                             </svg>
                         </div>
                         <h3>Operations Command Center</h3>
-                        <p class="service-description">One dashboard for everything. See warehouse throughput, sales pipeline, delivery status, and customer health in real time. Built for COOs who need answers without digging through spreadsheets.</p>
+                        <p class="service-description">Without visibility, problems become revenue losses before you spot them. One dashboard shows warehouse throughput, delivery status, customer health, and pipeline — so you catch issues before they cost money.</p>
                         <ul class="service-features">
                             <li>Real-time warehouse pick/pack/ship metrics</li>
                             <li>Sales rep performance and pipeline tracking</li>
@@ -4779,7 +4806,7 @@
     <!-- Trust Guarantees -->
     <section class="trust-guarantees">
         <div class="container">
-            <h2 style="text-align: center; color: white; margin-bottom: 48px; font-size: 28px;">Why Distributors Choose Us</h2>
+            <h2 style="text-align: center; color: white; margin-bottom: 48px; font-size: 28px;">Operations Automation That Pays for Itself</h2>
             <div class="trust-badges-grid">
                 <div class="trust-badge">
                     <div class="badge-icon-wrap"><span class="badge-icon">💰</span></div>
@@ -5070,7 +5097,7 @@
     <!-- How We Work -->
     <section class="how-we-work">
         <div class="container">
-            <h2 style="text-align: center; color: var(--dark-ink);">How We Recover Your Revenue</h2>
+            <h2 style="text-align: center; color: var(--dark-ink);">How We Automate Your Operations</h2>
             <div class="process-timeline">
                 <div class="process-step">
                     <div class="step-number">
@@ -5114,60 +5141,53 @@
     <!-- Free Tools -->
     <section class="free-tools">
         <div class="container">
-            <h2 style="text-align: center; color: var(--dark-ink);">Free Revenue Recovery Tools</h2>
-            <p class="tools-intro">Start here. These tools show you exactly how much revenue you're losing to silent churn. Takes 5-10 minutes each.</p>
+            <h2 style="text-align: center; color: var(--dark-ink);">See How Much You're Leaving on the Table</h2>
+            <p class="tools-intro">Free assessments that reveal the operational gaps costing you money. Each takes 5-10 minutes. See the problem, then let us fix it.</p>
             <div class="tools-grid">
-                <a href="https://tools.deeplineop.ai" class="tool-card">
+                <a href="https://tools.deeplineop.ai/business-dependency.html" class="tool-card" target="_blank">
                     <div class="tool-preview">
-                        <svg class="tool-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                        </svg>
+                        <span style="font-size: 20px;">&#9888;&#65039;</span>
                     </div>
-                    <div class="free-badge">FREE</div>
-                    <h4>Customer Churn Diagnostic</h4>
-                    <p>Upload your customer list and discover which accounts are at risk of churning in the next 90 days.</p>
+                    <div class="free-badge">Free Assessment</div>
+                    <h4>Business Dependency Score</h4>
+                    <p>What if you left tomorrow? 10 questions that reveal how dependent your business is on you. Exposes single points of failure with a PDF independence roadmap.</p>
+                    <span class="tool-funnel-link">Want the full fix? &#8594;</span>
                 </a>
-                <a href="https://tools.deeplineop.ai" class="tool-card">
+                <a href="https://tools.deeplineop.ai/ceo-time-audit.html" class="tool-card" target="_blank">
                     <div class="tool-preview">
-                        <svg class="tool-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
-                        </svg>
+                        <span style="font-size: 20px;">&#9200;</span>
                     </div>
-                    <div class="free-badge">FREE</div>
-                    <h4>Dormant Account Finder</h4>
-                    <p>Identify customers who used to order regularly but have gone quiet. See exactly how much revenue is sitting dormant.</p>
+                    <div class="free-badge">Free Assessment</div>
+                    <h4>CEO Time Audit</h4>
+                    <p>What's eating your week? Track where your hours go. AI categorizes each task as strategic, delegatable, or automatable — and converts savings into family dinners and growth hours.</p>
+                    <span class="tool-funnel-link">Want the full fix? &#8594;</span>
                 </a>
-                <a href="https://tools.deeplineop.ai" class="tool-card">
+                <a href="https://tools.deeplineop.ai/profit-leak-diagnostic.html" class="tool-card" target="_blank">
                     <div class="tool-preview">
-                        <svg class="tool-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V4H20C20.55 4 21 4.45 21 5S20.55 6 20 6H19V19C19 20.1 18.1 21 17 21H7C5.9 21 5 20.1 5 19V6H4C3.45 6 3 5.55 3 5S3.45 4 4 4H7ZM9 3V4H15V3H9ZM7 6V19H17V6H7Z"/>
-                            <path d="M9 8V17H11V8H9ZM13 8V17H15V8H13Z"/>
-                        </svg>
+                        <span style="font-size: 20px;">&#128184;</span>
                     </div>
-                    <div class="free-badge">FREE</div>
-                    <h4>Revenue Leak Calculator</h4>
-                    <p>Calculate exactly how much revenue you're losing to customer churn and dormant accounts every month.</p>
+                    <div class="free-badge">Free Assessment</div>
+                    <h4>Profit Leak Diagnostic</h4>
+                    <p>The $100K you don't know you're losing. 8 questions that calculate exactly how much profit is silently leaking — with a running total as you answer. Detailed PDF recovery plan.</p>
+                    <span class="tool-funnel-link">Want the full fix? &#8594;</span>
                 </a>
-                <a href="https://tools.deeplineop.ai" class="tool-card">
+                <a href="https://tools.deeplineop.ai/ai-readiness-scorecard.html" class="tool-card" target="_blank">
                     <div class="tool-preview">
-                        <svg class="tool-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V5H19V19Z"/>
-                            <path d="M7 7H17V9H7V7ZM7 11H17V13H7V11ZM7 15H17V17H7V15Z"/>
-                        </svg>
+                        <span style="font-size: 20px;">&#128202;</span>
                     </div>
-                    <div class="free-badge">FREE</div>
-                    <h4>Customer Health Scorecard</h4>
-                    <p>Score your customer relationships and identify which accounts need immediate attention before they churn.</p>
+                    <div class="free-badge">Free Assessment</div>
+                    <h4>Process Quality Audit</h4>
+                    <p>12-question quiz scoring your readiness across Data, Processes, People, and Technology. Detailed PDF with category breakdowns, quick wins, and a 90-day roadmap.</p>
+                    <span class="tool-funnel-link">Want the full fix? &#8594;</span>
                 </a>
-                <a href="https://tools.deeplineop.ai" class="tool-card">
+                <a href="https://tools.deeplineop.ai/reorder-calculator.html" class="tool-card" target="_blank">
                     <div class="tool-preview">
-                        <svg class="tool-icon" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M3 6L5 6L5 8L3 8V6ZM3 10L5 10L5 12L3 12V10ZM3 14L5 14L5 16L3 16V14ZM3 18L5 18L5 20L3 20V18ZM7 6L21 6V8L7 8V6ZM7 10L21 10V12L7 12V10ZM7 14L21 14V16L7 16V14ZM7 18L21 18V20L7 20V18Z"/>
-                        </svg>
+                        <span style="font-size: 20px;">&#128230;</span>
                     </div>
-                    <div class="free-badge">FREE</div>
-                    <h4>Reactivation ROI Estimator</h4>
-                    <p>Estimate how much revenue you could recover if you reactivated your dormant customer accounts.</p>
+                    <div class="free-badge">Free Calculator</div>
+                    <h4>Reorder Point Calculator</h4>
+                    <p>Calculate exactly when to reorder inventory based on daily sales velocity, lead time, and safety stock. Includes formula breakdown so you understand the math.</p>
+                    <span class="tool-funnel-link">Want the full fix? &#8594;</span>
                 </a>
             </div>
         </div>
@@ -5180,7 +5200,7 @@
                 <div class="about-photo">MR</div>
                 <div class="about-text">
                     <h2>Mo Roowala</h2>
-                    <div class="about-role">Revenue Recovery Specialist for Distributors</div>
+                    <div class="about-role">Operations Automation Specialist for Distributors</div>
                     <p>I spent 6 years as a firmware and robotics engineer building automation systems from the ground up. Embedded controls, sensor integration, production line optimization. I've seen firsthand how the right system can detect problems before they become expensive.</p>
                     <p>After working directly with distributors on their e-commerce and fulfillment operations, I realized most are sitting on a gold mine of dormant customer data. They know customers are leaving, but they don't know who, when, or why. I help them find those customers and bring them back.</p>
                     <p>NYU Tandon M.S. in Robotics and Mechatronics. Based in New Jersey. I work with distributors doing $5M-$100M who want to stop losing revenue to silent churn.</p>
@@ -5203,9 +5223,34 @@
     <!-- Final CTA -->
     <section id="contact" class="final-cta">
         <div class="container">
-            <h2>Stop Losing Revenue to Silent Churn</h2>
-            <a href="https://calendly.com/mo-deeplineop/30min" target="_blank" class="final-cta-btn">Get Your Free Diagnostic</a>
-            <p class="trust-line">No contracts. No pressure. Just a 30-minute conversation about the customers you're losing without knowing it.</p>
+            <h2>Your $500 Operations Diagnostic</h2>
+            <p class="diagnostic-subtitle" style="color: #D1D5DB; font-size: 18px; max-width: 700px; margin: 0 auto 32px; position: relative; z-index: 2;">One flat fee. A complete picture of where your operation bleeds revenue — and exactly how to fix it.</p>
+            <div class="diagnostic-details" style="max-width: 700px; margin: 0 auto 40px; text-align: left; position: relative; z-index: 2;">
+                <ul style="list-style: none; padding: 0; display: grid; gap: 12px;">
+                    <li style="display: flex; align-items: flex-start; gap: 12px; color: #D1D5DB; font-size: 15px;">
+                        <span style="color: #2ECC71; font-size: 18px; line-height: 1.4;">&#10003;</span>
+                        <span><strong style="color: white;">Complete customer health analysis</strong> — dormant accounts, revenue at risk, priority reactivation targets</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 12px; color: #D1D5DB; font-size: 15px;">
+                        <span style="color: #2ECC71; font-size: 18px; line-height: 1.4;">&#10003;</span>
+                        <span><strong style="color: white;">Full workflow audit</strong> — quoting, ordering, fulfillment, delivery — with time-cost analysis of every manual process</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 12px; color: #D1D5DB; font-size: 15px;">
+                        <span style="color: #2ECC71; font-size: 18px; line-height: 1.4;">&#10003;</span>
+                        <span><strong style="color: white;">90-day implementation playbook</strong> — prioritized automation roadmap you can start immediately</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 12px; color: #D1D5DB; font-size: 15px;">
+                        <span style="color: #2ECC71; font-size: 18px; line-height: 1.4;">&#10003;</span>
+                        <span><strong style="color: white;">Full data cleanup roadmap</strong> — with tool recommendations matched to your tech stack</span>
+                    </li>
+                    <li style="display: flex; align-items: flex-start; gap: 12px; color: #D1D5DB; font-size: 15px;">
+                        <span style="color: #2ECC71; font-size: 18px; line-height: 1.4;">&#10003;</span>
+                        <span><strong style="color: white;">ROI projections</strong> — for every automation opportunity we identify</span>
+                    </li>
+                </ul>
+            </div>
+            <a href="https://calendly.com/mo-deeplineop/30min" target="_blank" class="final-cta-btn">Get Your $500 Operations Diagnostic</a>
+            <p class="trust-line">Consultants charge $5-10K for this. We do it for $500 because it's how we earn your trust. No contracts. No pressure. Just a clear roadmap to stop bleeding revenue.</p>
         </div>
     </section>
 
@@ -5297,23 +5342,29 @@
             counterObserver.observe(counter);
         });
 
-        // Nav scroll shadow + hero parallax
+        // Debounced scroll handler with passive listener
         const heroGrid = document.querySelector('.hero .animated-grid');
         const heroAmbient = document.querySelector('.hero .hero-ambient');
+        const navEl = document.querySelector('nav');
+        let scrollTicking = false;
         window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 20) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
+            if (!scrollTicking) {
+                requestAnimationFrame(() => {
+                    if (window.scrollY > 20) {
+                        navEl.classList.add('scrolled');
+                    } else {
+                        navEl.classList.remove('scrolled');
+                    }
+                    var sy = window.scrollY;
+                    if (sy < 1200) {
+                        if (heroGrid) heroGrid.style.transform = 'translateY(' + (sy * 0.5) + 'px)';
+                        if (heroAmbient) heroAmbient.style.transform = 'translateY(' + (sy * 0.35) + 'px)';
+                    }
+                    scrollTicking = false;
+                });
+                scrollTicking = true;
             }
-            // Parallax: layers move at different speeds for depth
-            var sy = window.scrollY;
-            if (sy < 1200) {
-                if (heroGrid) heroGrid.style.transform = 'translateY(' + (sy * 0.5) + 'px)';
-                if (heroAmbient) heroAmbient.style.transform = 'translateY(' + (sy * 0.35) + 'px)';
-            }
-        });
+        }, { passive: true });
 
         // Initialize hero as visible immediately
         document.querySelector('.hero').classList.add('visible');
@@ -5497,12 +5548,18 @@
                 }, 400);
             }
 
+            let healthInterval = null;
             const healthObs = new IntersectionObserver(function(entries) {
                 entries.forEach(function(e) {
                     if (e.isIntersecting && !healthStarted) {
                         healthStarted = true;
                         renderHealth();
-                        setInterval(cycleHealth, 4000);
+                        healthInterval = setInterval(cycleHealth, 4000);
+                    } else if (e.isIntersecting && healthStarted && !healthInterval) {
+                        healthInterval = setInterval(cycleHealth, 4000);
+                    } else if (!e.isIntersecting && healthInterval) {
+                        clearInterval(healthInterval);
+                        healthInterval = null;
                     }
                 });
             }, { threshold: 0.3 });
@@ -5562,12 +5619,18 @@
                 var cR = document.getElementById('cReactivated'); if (cR) cR.textContent = reactivated;
             }
 
+            let campInterval = null;
             const campObs = new IntersectionObserver(function(entries) {
                 entries.forEach(function(e) {
                     if (e.isIntersecting && !campaignStarted) {
                         campaignStarted = true;
                         addEmail();
-                        setInterval(addEmail, 2500);
+                        campInterval = setInterval(addEmail, 2500);
+                    } else if (e.isIntersecting && campaignStarted && !campInterval) {
+                        campInterval = setInterval(addEmail, 2500);
+                    } else if (!e.isIntersecting && campInterval) {
+                        clearInterval(campInterval);
+                        campInterval = null;
                     }
                 });
             }, { threshold: 0.3 });
@@ -5609,7 +5672,7 @@
 
                 // Start feed
                 renderRevFeed();
-                setInterval(rotateRevFeed, 3500);
+                revFeedInterval = setInterval(rotateRevFeed, 3500);
             }
 
             function renderRevFeed() {
@@ -5631,11 +5694,17 @@
                 renderRevFeed();
             }
 
+            let revFeedInterval = null;
             var revObs = new IntersectionObserver(function(entries) {
                 entries.forEach(function(e) {
                     if (e.isIntersecting && !revStarted) {
                         revStarted = true;
                         animateRevDashboard();
+                    } else if (e.isIntersecting && revStarted && !revFeedInterval) {
+                        revFeedInterval = setInterval(rotateRevFeed, 3500);
+                    } else if (!e.isIntersecting && revFeedInterval) {
+                        clearInterval(revFeedInterval);
+                        revFeedInterval = null;
                     }
                 });
             }, { threshold: 0.3 });
@@ -5896,9 +5965,16 @@
                         routeStarted = true;
                         routeMap.style.transition = 'opacity 0.4s ease';
                         showRoute(states[0]);
+                    } else if (!entry.isIntersecting && routeStarted) {
+                        // Pause animation when offscreen
+                        if (animId) { cancelAnimationFrame(animId); animId = null; }
+                        if (cycleTimer) { clearTimeout(cycleTimer); cycleTimer = null; }
+                    } else if (entry.isIntersecting && routeStarted) {
+                        // Resume when back in view
+                        showRoute(states[stateIdx]);
                     }
                 });
-            }, { threshold: 0.3 });
+            }, { threshold: 0.1 });
             routeObs.observe(routeMap);
         })();
 
@@ -6041,20 +6117,23 @@
                 // Render initial feed items
                 renderCooFeed();
 
-                // Start feed rotation
-                setInterval(() => {
-                    rotateCooFeed();
-                }, 3500);
+                let cooFeedInterval = null;
 
-                // Set up intersection observer for animations
+                // Set up intersection observer for animations and pause/resume
                 const cooObserver = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting && !cooDashboardAnimated) {
                             cooDashboardAnimated = true;
                             animateCooDashboard();
+                            cooFeedInterval = setInterval(rotateCooFeed, 3500);
+                        } else if (entry.isIntersecting && !cooFeedInterval) {
+                            cooFeedInterval = setInterval(rotateCooFeed, 3500);
+                        } else if (!entry.isIntersecting && cooFeedInterval) {
+                            clearInterval(cooFeedInterval);
+                            cooFeedInterval = null;
                         }
                     });
-                }, { threshold: 0.5 });
+                }, { threshold: 0.3 });
 
                 cooObserver.observe(dashboard);
             }
@@ -6187,6 +6266,7 @@
 
             let feedIndex = 0;
             const feedInner = document.getElementById('feedInner');
+            let heroIntervals = [];
 
             function renderFeedItems() {
                 let html = '';
@@ -6201,48 +6281,55 @@
 
             renderFeedItems();
 
-            setInterval(function() {
-                feedInner.style.transform = 'translateY(-24px)';
-                feedInner.style.opacity = '0.5';
-                setTimeout(function() {
-                    feedIndex = (feedIndex + 1) % activities.length;
-                    renderFeedItems();
-                    feedInner.style.transition = 'none';
-                    feedInner.style.transform = 'translateY(0)';
-                    feedInner.style.opacity = '1';
-                    setTimeout(function() { feedInner.style.transition = 'transform 0.5s ease, opacity 0.3s ease'; }, 50);
-                }, 400);
-            }, 3000);
+            let dormant = 860, atRisk = 1.38, vipCustomers = 204;
 
-            // Live bar chart animation
-            setInterval(function() {
-                for (let i = 0; i < 8; i++) {
-                    const bar = document.getElementById('liveBar' + i);
-                    if (bar) bar.style.height = (15 + Math.random() * 45) + 'px';
-                }
-            }, 2000);
+            function startHeroAnimations() {
+                if (heroIntervals.length) return;
+                heroIntervals.push(setInterval(function() {
+                    feedInner.style.transform = 'translateY(-24px)';
+                    feedInner.style.opacity = '0.5';
+                    setTimeout(function() {
+                        feedIndex = (feedIndex + 1) % activities.length;
+                        renderFeedItems();
+                        feedInner.style.transition = 'none';
+                        feedInner.style.transform = 'translateY(0)';
+                        feedInner.style.opacity = '1';
+                        setTimeout(function() { feedInner.style.transition = 'transform 0.5s ease, opacity 0.3s ease'; }, 50);
+                    }, 400);
+                }, 3000));
+                heroIntervals.push(setInterval(function() {
+                    for (let i = 0; i < 8; i++) {
+                        const bar = document.getElementById('liveBar' + i);
+                        if (bar) bar.style.height = (15 + Math.random() * 45) + 'px';
+                    }
+                }, 2000));
+                heroIntervals.push(setInterval(function() {
+                    dormant += Math.floor(Math.random() * 10) - 5;
+                    dormant = Math.max(820, Math.min(900, dormant));
+                    document.getElementById('statRoutes').textContent = dormant;
+                    atRisk += (Math.random() * 0.08) - 0.04;
+                    atRisk = Math.max(1.25, Math.min(1.52, atRisk));
+                    document.getElementById('statDelivery').textContent = '$' + atRisk.toFixed(2) + 'M';
+                    vipCustomers += Math.floor(Math.random() * 6) - 3;
+                    vipCustomers = Math.max(195, Math.min(215, vipCustomers));
+                    document.getElementById('statRevenue').textContent = vipCustomers;
+                }, 4000));
+            }
 
-            // Stat counter animations
-            let dormant = 860;
-            let atRisk = 1.38;
-            let vipCustomers = 204;
+            function stopHeroAnimations() {
+                heroIntervals.forEach(function(id) { clearInterval(id); });
+                heroIntervals = [];
+            }
 
-            setInterval(function() {
-                dormant += Math.floor(Math.random() * 10) - 5;
-                if (dormant < 820) dormant = 820;
-                if (dormant > 900) dormant = 900;
-                document.getElementById('statRoutes').textContent = dormant;
-
-                atRisk += (Math.random() * 0.08) - 0.04;
-                if (atRisk < 1.25) atRisk = 1.25;
-                if (atRisk > 1.52) atRisk = 1.52;
-                document.getElementById('statDelivery').textContent = '$' + atRisk.toFixed(2) + 'M';
-
-                vipCustomers += Math.floor(Math.random() * 6) - 3;
-                if (vipCustomers < 195) vipCustomers = 195;
-                if (vipCustomers > 215) vipCustomers = 215;
-                document.getElementById('statRevenue').textContent = vipCustomers;
-            }, 4000);
+            // Observe hero section visibility
+            const heroSection = document.querySelector('.hero');
+            const heroObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) { startHeroAnimations(); }
+                    else { stopHeroAnimations(); }
+                });
+            }, { threshold: 0.1 });
+            heroObserver.observe(heroSection);
 
             // Dashboard clock
             function updateClock() {
