@@ -929,11 +929,135 @@
             opacity: 0.3;
         }
 
+        .services-group-header {
+            text-align: center;
+            margin-top: 48px;
+            margin-bottom: 12px;
+        }
+
+        .services-group-header:first-of-type {
+            margin-top: 32px;
+        }
+
+        .services-group-header h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--dark-ink);
+            margin-bottom: 6px;
+            letter-spacing: -0.01em;
+        }
+
+        .services-group-header p {
+            color: var(--medium-gray);
+            font-size: 15px;
+            margin: 0 auto;
+        }
+
+        .price-badge {
+            background: var(--signal-green);
+            color: white;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .price-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: badgeShine 3s infinite;
+        }
+
+        .audit-report-preview {
+            padding: 16px;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            border-radius: 8px;
+        }
+
+        .audit-report-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+
+        .audit-report-header span:first-child {
+            font-size: 12px;
+            font-weight: 600;
+            color: #cbd5e1;
+        }
+
+        .audit-report-header span:last-child {
+            font-size: 10px;
+            color: #64748b;
+        }
+
+        .audit-task-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .audit-task-row:last-child {
+            border-bottom: none;
+        }
+
+        .audit-task-name {
+            font-size: 11px;
+            color: #94a3b8;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .audit-task-before {
+            font-size: 11px;
+            color: #ef4444;
+            width: 55px;
+            text-align: right;
+        }
+
+        .audit-task-arrow {
+            font-size: 10px;
+            color: #64748b;
+        }
+
+        .audit-task-after {
+            font-size: 11px;
+            color: #22c55e;
+            font-weight: 600;
+            width: 55px;
+        }
+
+        .audit-task-bar {
+            flex: 0 0 60px;
+            height: 6px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .audit-task-bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            background: linear-gradient(90deg, #22c55e, #1B9AAA);
+        }
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 32px;
-            margin-top: 48px;
+            margin-top: 24px;
             position: relative;
         }
 
@@ -3077,7 +3201,7 @@
 
         .trust-badges-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
         }
 
@@ -4167,7 +4291,7 @@
             <div class="hero-grid">
                 <div class="hero-content">
                     <h1>Stop Losing Customers You Already Won.</h1>
-                    <p class="hero-subtitle">Most distributors lose 15-25% of their customers every year. Not to complaints. Not to competitors. They just stop ordering and nobody notices. I find them, and I bring them back.</p>
+                    <p class="hero-subtitle">Most distributors lose 15-25% of their customers every year. The ones who survive are automating everything from quoting to route planning to customer recovery. We build those systems.</p>
                     <a href="#contact" class="hero-cta">Get Your Free Diagnostic</a>
                 </div>
                 
@@ -4249,8 +4373,8 @@
                             <div class="broken-line"></div>
                         </div>
                     </div>
-                    <h3>Your Data Is Trapped in QuickBooks</h3>
-                    <p>Customer insights buried in spreadsheets. No way to see who's declining, who's at risk. Your data tells a story, but you can't read it.</p>
+                    <h3>Your Team Is Drowning in Manual Work</h3>
+                    <p>Quoting takes hours. Route planning is guesswork. Your best people spend more time on spreadsheets than on customers. Every manual process is revenue you're not earning.</p>
                 </div>
                 <div class="problem-card">
                     <div class="problem-visual">
@@ -4264,8 +4388,8 @@
                             <div class="question-mark">?</div>
                         </div>
                     </div>
-                    <h3>You're Reacting, Not Preventing</h3>
-                    <p>By the time you notice a customer left, it's too late. No early warning system. No way to prevent churn before it happens.</p>
+                    <h3>You Can't See What's Actually Happening</h3>
+                    <p>No real-time view of operations. No early warning when customers slip. No way to know which routes are profitable. You're making decisions based on last month's numbers, not today's reality.</p>
                 </div>
             </div>
         </div>
@@ -4274,7 +4398,13 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 style="text-align: center; color: var(--dark-ink);">How We Recover Your Revenue</h2>
+            <h2 style="text-align: center; color: var(--dark-ink);">What We Build For Distributors</h2>
+
+            <!-- Revenue Recovery Group -->
+            <div class="services-group-header">
+                <h3>Revenue Recovery</h3>
+                <p>Find dormant customers, bring them back, and prevent future churn</p>
+            </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-header">
@@ -4375,7 +4505,7 @@
                     <a href="#contact" class="service-link">Learn More →</a>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card" style="grid-column: 1 / -1;">
                     <div class="service-header">
                         <div class="service-icon">
                             <svg viewBox="0 0 24 24">
@@ -4390,13 +4520,14 @@
                                 <path d="M12 18h.01"/>
                             </svg>
                         </div>
-                        <h3>Revenue Intelligence Dashboard</h3>
-                        <p class="service-description">Live Looker Studio dashboard showing customer health scores, segment movement, forecasting.</p>
+                        <h3>Revenue Intelligence & Full Recovery Retainer</h3>
+                        <p class="service-description">Live dashboard with customer health scores, churn prediction, VIP retention, cross-sell campaigns, and rep performance insights. The complete revenue recovery system.</p>
                         <ul class="service-features">
-                            <li>Real-time customer health scoring and alerts</li>
-                            <li>Revenue at risk tracking and early warning systems</li>
-                            <li>Customer segment movement and trend analysis</li>
-                            <li>Churn prediction and retention opportunity identification</li>
+                            <li>Real-time customer health scoring and early warning alerts</li>
+                            <li>Revenue at risk tracking and churn prediction</li>
+                            <li>VIP customer retention and expansion strategies</li>
+                            <li>Cross-sell and upsell campaign development</li>
+                            <li>Sales rep performance insights and quarterly portfolio reviews</li>
                         </ul>
                     </div>
                     <div class="service-preview">
@@ -4444,28 +4575,138 @@
                     </div>
                     <a href="#contact" class="service-link">Learn More →</a>
                 </div>
+            </div>
+
+            <!-- Operations & Automation Group -->
+            <div class="services-group-header">
+                <h3>Operations & Automation</h3>
+                <p>Eliminate manual work, optimize logistics, and see your entire operation in real time</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/>
+                                <rect x="9" y="3" width="6" height="4" rx="1"/>
+                                <path d="m9 14 2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <span class="price-badge">$500 one-time</span>
+                        <h3>Operations & Task Automation Audit</h3>
+                        <p class="service-description">We walk through your daily operations and identify the 5-10 tasks burning the most hours. You get a prioritized report showing exactly what to automate first and the expected time savings.</p>
+                        <ul class="service-features">
+                            <li>Full workflow audit of quoting, ordering, and fulfillment processes</li>
+                            <li>Time-cost analysis of manual tasks (hours wasted per week)</li>
+                            <li>Prioritized automation roadmap with ROI estimates</li>
+                            <li>Tool recommendations matched to your tech stack</li>
+                            <li>30-day action plan you can start immediately</li>
+                        </ul>
+                    </div>
+                    <div class="service-preview">
+                        <div class="audit-report-preview">
+                            <div class="audit-report-header">
+                                <span>Automation Audit Report</span>
+                                <span>Priority Tasks</span>
+                            </div>
+                            <div class="audit-task-row">
+                                <span class="audit-task-name">Manual Quote Generation</span>
+                                <span class="audit-task-before">12 hrs/wk</span>
+                                <span class="audit-task-arrow">→</span>
+                                <span class="audit-task-after">1 hr/wk</span>
+                                <div class="audit-task-bar"><div class="audit-task-bar-fill" style="width: 92%;"></div></div>
+                            </div>
+                            <div class="audit-task-row">
+                                <span class="audit-task-name">Route Planning</span>
+                                <span class="audit-task-before">8 hrs/wk</span>
+                                <span class="audit-task-arrow">→</span>
+                                <span class="audit-task-after">1 hr/wk</span>
+                                <div class="audit-task-bar"><div class="audit-task-bar-fill" style="width: 87%;"></div></div>
+                            </div>
+                            <div class="audit-task-row">
+                                <span class="audit-task-name">Inventory Reconciliation</span>
+                                <span class="audit-task-before">6 hrs/wk</span>
+                                <span class="audit-task-arrow">→</span>
+                                <span class="audit-task-after">30 min/wk</span>
+                                <div class="audit-task-bar"><div class="audit-task-bar-fill" style="width: 92%;"></div></div>
+                            </div>
+                            <div class="audit-task-row">
+                                <span class="audit-task-name">Order Entry & Processing</span>
+                                <span class="audit-task-before">10 hrs/wk</span>
+                                <span class="audit-task-arrow">→</span>
+                                <span class="audit-task-after">2 hrs/wk</span>
+                                <div class="audit-task-bar"><div class="audit-task-bar-fill" style="width: 80%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="service-link">Get Your Audit →</a>
+                </div>
 
                 <div class="service-card">
                     <div class="service-header">
                         <div class="service-icon">
                             <svg viewBox="0 0 24 24">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                <circle cx="12" cy="10" r="3"/>
+                                <line x1="12" y1="1" x2="12" y2="23"/>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
                             </svg>
                         </div>
-                        <h3>Full Revenue Recovery Retainer</h3>
-                        <p class="service-description">Everything above plus VIP retention, cross-sell campaigns, rep performance insights.</p>
+                        <h3>Automated Quoting & Pricing</h3>
+                        <p class="service-description">Stop spending hours on quotes. Our system pulls your pricing rules, customer history, and inventory levels to generate accurate quotes in seconds. Handles tiered pricing, volume discounts, and customer-specific rates.</p>
                         <ul class="service-features">
-                            <li>VIP customer retention and expansion strategies</li>
-                            <li>Cross-sell and upsell campaign development</li>
-                            <li>Sales rep performance insights and coaching</li>
-                            <li>Quarterly customer portfolio reviews and optimization</li>
+                            <li>Customer-specific pricing with historical discount logic</li>
+                            <li>Real-time inventory check during quote generation</li>
+                            <li>Automatic margin protection and floor price enforcement</li>
+                            <li>Quote-to-order conversion tracking</li>
+                            <li>Integration with QuickBooks and existing systems</li>
+                        </ul>
+                    </div>
+                    <div class="service-preview">
+                        <div class="quoting-interface" id="quotingInterface">
+                            <div class="quote-form">
+                                <div class="form-field">Customer: ABC Electric</div>
+                                <div class="form-field">Tier: Volume A</div>
+                                <div class="form-field">Product: 12AWG Wire (500ft)</div>
+                                <div class="form-field">Qty: 24 spools</div>
+                            </div>
+                            <div class="quote-result">
+                                <div style="display:flex;align-items:center;gap:8px;">
+                                    <span style="color:#10b981;font-weight:700;">✓</span>
+                                    <div>
+                                        <div style="font-size:13px;font-weight:600;color:#065f46;">Quote Generated</div>
+                                        <div style="font-size:11px;color:#047857;">$4,320.00 — 12% volume discount applied</div>
+                                    </div>
+                                </div>
+                                <div style="font-size:11px;color:#059669;font-weight:600;">Margin: 34%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="service-link">See How It Works →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24">
+                                <rect x="1" y="3" width="15" height="13" rx="2"/>
+                                <path d="M16 8h4l3 3v5a2 2 0 0 1-2 2h-1"/>
+                                <circle cx="5.5" cy="18.5" r="2.5"/>
+                                <circle cx="18.5" cy="18.5" r="2.5"/>
+                            </svg>
+                        </div>
+                        <h3>Delivery Route Optimization</h3>
+                        <p class="service-description">Reduce fuel costs and delivery times. Our route planning tools optimize your fleet's daily routes based on order priority, location clusters, and time windows. Most distributors save 15-25% on fuel within 60 days.</p>
+                        <ul class="service-features">
+                            <li>Daily route optimization for your delivery fleet</li>
+                            <li>Priority-based delivery scheduling (VIP accounts first)</li>
+                            <li>Fuel cost tracking and savings reporting</li>
+                            <li>Delivery time window management</li>
+                            <li>Real-time route adjustments for same-day orders</li>
                         </ul>
                     </div>
                     <div class="service-preview">
                         <div class="revenue-timeline" id="revenueTimeline">
                             <div class="rev-tl-header">
-                                <span style="font-size:12px;font-weight:600;color:#cbd5e1;">Revenue Growth Timeline</span>
+                                <span style="font-size:12px;font-weight:600;color:#cbd5e1;">Route Optimization Savings</span>
                                 <span style="font-size:10px;color:#64748b;">12-Month View</span>
                             </div>
                             <div class="rev-tl-bars" id="revTlBars">
@@ -4479,7 +4720,57 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#contact" class="service-link">Learn More →</a>
+                    <a href="#contact" class="service-link">Optimize Routes →</a>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                                <path d="M6 8h.01"/>
+                                <path d="M10 8h8"/>
+                                <path d="M6 12h.01"/>
+                                <path d="M10 12h8"/>
+                            </svg>
+                        </div>
+                        <h3>Operations Command Center</h3>
+                        <p class="service-description">One dashboard for everything. See warehouse throughput, sales pipeline, delivery status, and customer health in real time. Built for COOs who need answers without digging through spreadsheets.</p>
+                        <ul class="service-features">
+                            <li>Real-time warehouse pick/pack/ship metrics</li>
+                            <li>Sales rep performance and pipeline tracking</li>
+                            <li>Delivery status and on-time performance</li>
+                            <li>Inventory levels and reorder alerts</li>
+                            <li>Customer health scores and at-risk alerts</li>
+                        </ul>
+                    </div>
+                    <div class="service-preview">
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:16px;background:linear-gradient(135deg,#0f172a,#1e293b);border-radius:8px;">
+                            <div class="coo-metric" style="background:rgba(255,255,255,0.05);border-radius:8px;padding:12px;border-left:3px solid #22c55e;">
+                                <div style="font-size:10px;color:#64748b;">Warehouse</div>
+                                <div style="font-size:18px;font-weight:700;color:#22c55e;">94.2%</div>
+                                <div style="font-size:10px;color:#94a3b8;">On-time pick rate</div>
+                            </div>
+                            <div class="coo-metric" style="background:rgba(255,255,255,0.05);border-radius:8px;padding:12px;border-left:3px solid #1B9AAA;">
+                                <div style="font-size:10px;color:#64748b;">Deliveries</div>
+                                <div style="font-size:18px;font-weight:700;color:#1B9AAA;">47/52</div>
+                                <div style="font-size:10px;color:#94a3b8;">On-time today</div>
+                            </div>
+                            <div class="coo-metric" style="background:rgba(255,255,255,0.05);border-radius:8px;padding:12px;border-left:3px solid #fbbf24;">
+                                <div style="font-size:10px;color:#64748b;">Pipeline</div>
+                                <div style="font-size:18px;font-weight:700;color:#fbbf24;">$284K</div>
+                                <div style="font-size:10px;color:#94a3b8;">Open quotes</div>
+                            </div>
+                            <div class="coo-metric" style="background:rgba(255,255,255,0.05);border-radius:8px;padding:12px;border-left:3px solid #ef4444;">
+                                <div style="font-size:10px;color:#64748b;">Inventory</div>
+                                <div style="font-size:18px;font-weight:700;color:#ef4444;">3</div>
+                                <div style="font-size:10px;color:#94a3b8;">Items below reorder</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="service-link">See the Dashboard →</a>
                 </div>
             </div>
         </div>
@@ -4488,7 +4779,7 @@
     <!-- Trust Guarantees -->
     <section class="trust-guarantees">
         <div class="container">
-            <h2 style="text-align: center; color: white; margin-bottom: 48px; font-size: 28px;">Why Distributors Choose Us For Revenue Recovery</h2>
+            <h2 style="text-align: center; color: white; margin-bottom: 48px; font-size: 28px;">Why Distributors Choose Us</h2>
             <div class="trust-badges-grid">
                 <div class="trust-badge">
                     <div class="badge-icon-wrap"><span class="badge-icon">💰</span></div>
@@ -4509,6 +4800,16 @@
                     <div class="badge-icon-wrap"><span class="badge-icon">🔍</span></div>
                     <strong>QuickBooks Export Analysis</strong>
                     <div class="badge-desc">Works with your existing data, no system changes</div>
+                </div>
+                <div class="trust-badge">
+                    <div class="badge-icon-wrap"><span class="badge-icon">⚡</span></div>
+                    <strong>90% Less Manual Work</strong>
+                    <div class="badge-desc">Average task automation reduces manual hours by 90%</div>
+                </div>
+                <div class="trust-badge">
+                    <div class="badge-icon-wrap"><span class="badge-icon">🚛</span></div>
+                    <strong>15-25% Fuel Savings</strong>
+                    <div class="badge-desc">Route optimization delivers measurable savings in 60 days</div>
                 </div>
             </div>
         </div>
@@ -4598,6 +4899,9 @@
                         <div class="ticker-item">92% of distributors have no churn early warning system (Distribution Strategy Group)</div>
                         <div class="ticker-item">$180K average revenue recovery per quarter for mid-size distributors (Client case studies)</div>
                         <div class="ticker-item">67% of lost customers never complained, they just stopped ordering (Harvard Business Review)</div>
+                        <div class="ticker-item">14 hours/week average time spent on manual quoting for mid-size distributors</div>
+                        <div class="ticker-item">15-25% fuel savings from route optimization (Fleet Management Association)</div>
+                        <div class="ticker-item">90% of distributor operations tasks can be automated with existing tools</div>
                     </div>
                 </div>
 
@@ -4678,7 +4982,7 @@
 
             <!-- Case Study Teasers -->
             <div class="case-studies-section">
-                <h2 style="text-align: center; color: var(--dark-ink); margin-bottom: 48px;">Revenue Recovery Success Stories</h2>
+                <h2 style="text-align: center; color: var(--dark-ink); margin-bottom: 48px;">Real Results From Real Distributors</h2>
                 <div class="case-studies-grid">
                     <div class="case-study-card" data-delay="0">
                         <div class="case-tag">Customer Reactivation</div>
@@ -4708,32 +5012,36 @@
                     </div>
 
                     <div class="case-study-card" data-delay="200">
-                        <div class="case-tag">Churn Prevention</div>
-                        <h4>Industrial Supply Distributor</h4>
-                        <p>A regional industrial distributor implemented customer health scoring across 4,800 accounts. Early warning alerts identified 340 at-risk customers before they churned. Proactive retention campaigns <strong>saved $420K in annual recurring revenue</strong> with 67% success rate on intervention.</p>
-                        <div class="case-visual systems-integration-visual">
-                            <div class="integration-network">
-                                <div class="system-node erp">ERP</div>
-                                <div class="system-node wms">WMS</div>
-                                <div class="system-node crm">CRM</div>
-                                <div class="system-node rfid">RFID</div>
-                                <div class="pulse-line line-1"></div>
-                                <div class="pulse-line line-2"></div>
-                                <div class="pulse-line line-3"></div>
-                                <div class="pulse-line line-4"></div>
-                                <div class="central-processor">SYNC</div>
+                        <div class="case-tag">Task Automation</div>
+                        <h4>Electrical Supply Distributor</h4>
+                        <p>A 30-employee electrical supply distributor was spending 14 hours per week on manual quoting alone. After implementing automated pricing with customer-specific rules and inventory checks, quote generation dropped to under 2 hours per week. Reps redirected that time to calling dormant accounts, generating <strong>$340K in recovered revenue in 6 months</strong>.</p>
+                        <div class="case-visual quote-automation-visual">
+                            <div class="automation-timeline">
+                                <div class="timeline-step">
+                                    <div class="step-icon manual">M</div>
+                                    <div class="step-label">Manual</div>
+                                    <div class="step-time">14 hrs/wk</div>
+                                </div>
+                                <div class="timeline-arrow">
+                                    <div class="arrow-shaft"></div>
+                                    <div class="arrow-head"></div>
+                                </div>
+                                <div class="timeline-step">
+                                    <div class="step-icon automated">A</div>
+                                    <div class="step-label">Automated</div>
+                                    <div class="step-time">2 hrs/wk</div>
+                                </div>
                             </div>
-                            <div class="integration-stats">
-                                <div class="stat-item">95% accuracy</div>
-                                <div class="stat-item">75% fewer stockouts</div>
+                            <div class="savings-display">
+                                <div class="savings-metric">$340K recovered</div>
                             </div>
                         </div>
                     </div>
 
                     <div class="case-study-card" data-delay="400">
-                        <div class="case-tag">Portfolio Optimization</div>
-                        <h4>Construction Materials Distributor</h4>
-                        <p>A construction materials distributor discovered 28% of their customer base was unprofitable after analysis. Customer portfolio restructuring and strategic account management <strong>increased average order value by 31% and eliminated $95K in annual losses</strong> from low-margin accounts.</p>
+                        <div class="case-tag">Operations Visibility</div>
+                        <h4>HVAC Parts Distributor</h4>
+                        <p>An HVAC parts distributor had zero visibility into which trucks were profitable and which routes were losing money. Our operations dashboard revealed 3 routes running at negative margin. Route optimization and customer re-clustering <strong>saved $89K annually in fuel and labor costs</strong> while improving on-time delivery from 78% to 96%.</p>
                         <div class="case-visual route-optimization-visual">
                             <div class="route-map">
                                 <div class="map-background"></div>
@@ -4749,7 +5057,7 @@
                                         <path class="route-path" d="M50,20 Q100,30 120,35 Q90,45 110,75 Q70,80 60,85"></path>
                                     </svg>
                                 </div>
-                                <div class="fuel-savings">10M gal saved</div>
+                                <div class="fuel-savings">$89K saved</div>
                             </div>
                         </div>
                     </div>
