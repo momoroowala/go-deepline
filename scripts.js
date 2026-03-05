@@ -961,3 +961,40 @@ window.addEventListener('resize', initTicker, { passive: true });
         quotingObserver.observe(quotingCycler);
     }
 })();
+
+// ========== LEAD CAPTURE ==========
+function handleLeadCapture(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type="submit"]');
+    const firstName = document.getElementById('leadFirst').value.trim();
+    const lastName = document.getElementById('leadLast').value.trim();
+    const company = document.getElementById('leadCompany').value.trim();
+    const email = document.getElementById('leadEmail').value.trim();
+    
+    if(!firstName || !lastName || !company || !email) return;
+    
+    fetch('https://script.google.com/macros/s/AKfycbxH-0F_yuJve8Bvzf1WWqYc5Z0ptXRRktVCmLEEa-7Dbs3ear7cNESr6-Bmm8mQIJaZ/exec', {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain' },
+        body: JSON.stringify({
+            name: firstName + ' ' + lastName,
+            email: email,
+            tool: 'Free Customer Audit Form',
+            company: company,
+            _subject: 'New Lead: ' + firstName + ' ' + lastName + ' - Free Customer Audit Form',
+            message: firstName + ' ' + lastName + ' (' + email + ') from ' + company + ' requested the Free Customer Audit Form.'
+        })
+    }).catch(function(){});
+    
+    if (btn) {
+        btn.textContent = 'Submitted';
+        btn.style.backgroundColor = 'var(--signal-green)';
+        btn.style.color = '#fff';
+    }
+    
+    var formSuccess = document.getElementById('formSuccess');
+    if (formSuccess) formSuccess.style.display = 'block';
+    
+    var formNote = document.getElementById('formNote');
+    if (formNote) formNote.style.display = 'none';
+}
