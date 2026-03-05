@@ -104,64 +104,6 @@
     }
     </script>
 
-    <!-- Schema: FAQPage -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What if we don't use QuickBooks?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We work with any system that can export customer and order data: QuickBooks, NetSuite, SAP, Sage, or even spreadsheets. If you can export a CSV, we can analyze it."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do we need to change our current systems?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. We work on top of your existing systems. No migration, no ERP overhaul, no new software to install. We analyze your data export and deliver actionable results."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What does the money-back guarantee actually mean?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "If our diagnostic does not identify at least $50K in recoverable dormant revenue, you get a full refund. No questions asked."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is this different from our ERP vendor?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "ERP vendors manage your operations. We analyze your customer data to find revenue you are already losing. ERPs track what happened; we predict what is about to happen and help you prevent it."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "We're a specialty/ethnic food distributor. Does this work for us?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Especially well. Specialty and ethnic food distributors often have the highest recovery potential because buying patterns are more niche and harder to replace. We have deep experience analyzing supply chain and operations data for halal, kosher, Latin, and Asian specialty distributors. Community purchasing cycles, cultural seasonal demand, and multi-language customer bases all require a different approach than standard distribution models."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long before we see results?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The diagnostic takes 48 hours. Your 90-day playbook starts producing results within the first 30 days. Most clients see measurable revenue recovery by Month 2."
-          }
-        }
-      ]
-    }
-    </script>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -341,7 +283,7 @@
         .hero {
             background: var(--deep-purple-navy);
             color: white;
-            padding: 100px 0 80px;
+            padding: 65px 0 80px;
             position: relative;
             overflow: hidden;
         }
@@ -1398,6 +1340,61 @@
             color: var(--dark-ink);
         }
 
+        .audit-task-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .audit-task-row {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 8px 12px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 6px;
+            opacity: 0;
+        }
+
+        .service-preview.mockup-visible .audit-task-row:nth-child(1) { animation: slideInRow 0.4s ease forwards; animation-delay: 0.1s; }
+        .service-preview.mockup-visible .audit-task-row:nth-child(2) { animation: slideInRow 0.4s ease forwards; animation-delay: 0.2s; }
+        .service-preview.mockup-visible .audit-task-row:nth-child(3) { animation: slideInRow 0.4s ease forwards; animation-delay: 0.3s; }
+        .service-preview.mockup-visible .audit-task-row:nth-child(4) { animation: slideInRow 0.4s ease forwards; animation-delay: 0.4s; }
+        .service-preview.mockup-visible .audit-task-row:nth-child(5) { animation: slideInRow 0.4s ease forwards; animation-delay: 0.5s; }
+
+        .audit-task-name {
+            font-size: 11px;
+            color: #cbd5e1;
+            font-weight: 500;
+        }
+
+        .audit-task-hours {
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .audit-progress-bar {
+            height: 4px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 2px;
+            overflow: hidden;
+            margin-top: 2px;
+        }
+
+        .audit-progress-fill {
+            height: 100%;
+            border-radius: 2px;
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        .service-preview.mockup-visible .audit-progress-fill {
+            animation: scaleBarX 0.8s ease forwards;
+            animation-delay: 0.6s;
+        }
+
         .health-analysis {
             background: linear-gradient(135deg, #0f172a, #1e293b);
             padding: 16px;
@@ -1570,7 +1567,7 @@
             }
 
             .hero {
-                padding: 80px 0 60px;
+                padding: 50px 0 60px;
             }
 
             .hero-ctas {
@@ -1690,11 +1687,10 @@
         <div class="nav-container">
             <a href="/" class="logo-section">
                 <img src="logo.png" alt="DeepLine Operations">
-                <span class="logo-text">DeepLine Operations</span>
             </a>
             <div class="nav-right">
                 <a href="tel:2018005490" class="nav-phone">(201) 800-5490</a>
-                <a href="#diagnostic" class="nav-cta">Book Your Diagnostic</a>
+                <a href="#diagnostic" class="nav-cta">Claim Your Diagnostic</a>
             </div>
             <button class="mobile-menu">&#9776;</button>
         </div>
@@ -1707,493 +1703,16 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badge">For Small &amp; Mid-Market Food Distributors · $5M to $500M</div>
-                <h1>Your Data Isn't Ready for AI.<br>We Fix That First.</h1>
-                <p class="hero-subtitle">95% of AI projects fail because companies skip the hardest part: cleaning their data and fixing their processes first. We do that for food distributors, then layer automation on top of systems that are actually ready for it.</p>
+                <h1>Your current staff is capable of 2x the volume. Watch us map your AI-driven 90 day plan (zero new hires) in 30 minutes.</h1>
+                <p class="hero-subtitle">No ERP Overhaul. No 6-figure 18-month timeline. No Complicated Tech. We fix processes for food distributors, then layer useful automation on top of systems that are actually ready for it.</p>
                 <div class="hero-ctas">
-                    <a href="#diagnostic" class="hero-cta primary">$500 Operations Diagnostic</a>
-                    <a href="#free-report" class="hero-cta secondary">Free Customer Account Review</a>
+                    <a href="#diagnostic" class="hero-cta primary">Claim Your Diagnostic</a>
                 </div>
                 <p class="trust-line"><strong>100% money-back guarantee.</strong> No contracts. Results in 48 hours.</p>
             </div>
         </div>
     </section>
 
-    <!-- Stats Bar -->
-    <div class="stats-bar">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">34%</span>
-                    <span class="stat-label">Avg. Dormant Customers</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">$180K</span>
-                    <span class="stat-label">Avg. Quarterly Recovery</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">92%</span>
-                    <span class="stat-label">Have No Churn Warning</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">6x</span>
-                    <span class="stat-label">Cheaper Than New Leads</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Problem Section -->
-    <section class="problems">
-        <div class="container">
-            <div class="section-header">
-                <h2>Food Distribution Has Unique Challenges That Generic Software Ignores</h2>
-                <p>Seasonal demand, perishable inventory, ethnic buying patterns, supply chain disruptions, multi-stop routes. Your business doesn't fit standard models.</p>
-            </div>
-            <div class="problems-grid">
-                <div class="problem-card">
-                    <div class="problem-visual">
-                        <div class="problem-icon">&#128123;</div>
-                    </div>
-                    <h3>Ghost Customers</h3>
-                    <div class="problem-stat">40-60% of accounts go quiet every year</div>
-                    <p>They don't cancel. They just stop ordering. By the time you notice, they've found another distributor for their avocados, proteins, and specialty items.</p>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-visual">
-                        <div class="problem-icon">&#128203;</div>
-                    </div>
-                    <h3>Manual Everything</h3>
-                    <div class="problem-stat">14 hrs/week spent on manual quoting</div>
-                    <p>Your team is buried in spreadsheets, price lookups, and custom quotes for every restaurant and grocery account. That's time not spent selling.</p>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-visual">
-                        <div class="problem-icon">&#128065;</div>
-                    </div>
-                    <h3>Rep Blind Spots</h3>
-                    <div class="problem-stat">30% of accounts are under-served</div>
-                    <p>Your reps focus on their top 20 accounts. The other 80% get no outreach, no check-ins, no upsells. Revenue leaks silently from neglected accounts.</p>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-visual">
-                        <div class="problem-icon">&#128279;</div>
-                    </div>
-                    <h3>Supply Chain Blind Spots</h3>
-                    <div class="problem-stat">$.7T in global supply chain losses (2025)</div>
-                    <p>Ingredient shortages, supplier delays, and price spikes hit without warning. You find out when the truck doesn't show up, not when the problem starts. Without real-time supplier visibility, you are always reacting instead of planning.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Results Section -->
-    <section class="results">
-        <div class="container">
-            <div class="section-header">
-                <h2>Real Results from Food Distributors Like You</h2>
-                <p>These are real outcomes from distributors who ran the diagnostic and followed the playbook.</p>
-            </div>
-            <div class="results-grid">
-                <div class="result-card" data-delay="0">
-                    <div class="result-tag">Frozen Foods</div>
-                    <h4>Revenue Reactivation</h4>
-                    <div class="result-company">Frozen Food Distributor, Northeast, 45 employees</div>
-                    <div class="result-number">$247K</div>
-                    <div class="result-detail">Recovered in 90 days. 38 dormant restaurant accounts reactivated through targeted outreach. Average order size increased 22% on returning customers.</div>
-                </div>
-                <div class="result-card" data-delay="200">
-                    <div class="result-tag">Produce</div>
-                    <h4>Churn Prevention</h4>
-                    <div class="result-company">Produce Distributor, Mid-Atlantic, 30 employees</div>
-                    <div class="result-number">$183K</div>
-                    <div class="result-detail">Recovered per quarter. Identified 52 at-risk accounts before they churned. Seasonal buying pattern analysis caught early warning signs their reps missed.</div>
-                </div>
-                <div class="result-card" data-delay="400">
-                    <div class="result-tag">Specialty Foods</div>
-                    <h4>Operations Savings</h4>
-                    <div class="result-company">Specialty Food Distributor, Tri-State, 55 employees</div>
-                    <div class="result-number">$312K</div>
-                    <div class="result-detail">Saved annually. Automated quoting cut 12 hours/week. Customer health dashboard caught 67 declining accounts. Ethnic food buying patterns flagged for seasonal campaigns.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section class="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2>How It Works</h2>
-            </div>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h3>Export Your Data</h3>
-                    <div class="step-time">2 minutes</div>
-                    <p>Export your customer and order history from QuickBooks, NetSuite, Sage, or any system. CSV works.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h3>We Run the Diagnostic</h3>
-                    <div class="step-time">48 hours</div>
-                    <p>We analyze every customer, every order pattern, every seasonal trend. You get a full report.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h3>90-Day Playbook</h3>
-                    <div class="step-time">Your roadmap</div>
-                    <p>Prioritized list of who to call, what to offer, and when. Specific to your food distribution business.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">4</div>
-                    <h3>Revenue Recovers</h3>
-                    <div class="step-time">Results by Month 2</div>
-                    <p>Follow the playbook. Watch dormant accounts come back. Track every dollar recovered.</p>
-                </div>
-            </div>
-            <div class="no-migration">
-                <p>Works on top of your existing systems. No migration. No ERP overhaul. No new software to install.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>What We Build For You</h2>
-                <p>Every service is designed specifically for food distributors. No generic solutions.</p>
-            </div>
-            <div class="services-grid">
-
-                <!-- Service 1: Customer Data Diagnostic -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                <polyline points="14,2 14,8 20,8"/>
-                                <line x1="16" y1="13" x2="8" y2="13"/>
-                                <line x1="16" y1="17" x2="8" y2="17"/>
-                                <polyline points="10,9 9,9 8,9"/>
-                            </svg>
-                        </div>
-                        <h3>Customer Data Diagnostic</h3>
-                        <div class="service-price-badge">$500 one-time</div>
-                        <p class="service-description">One export from QuickBooks or your order system. Full report in 48 hours showing every dormant customer, revenue at risk, and exactly who to call first.</p>
-                        <ul class="service-features">
-                            <li>Customer health analysis in 48 hours</li>
-                            <li>Dormant account identification with revenue sizing</li>
-                            <li>Seasonal ordering pattern detection (food-specific)</li>
-                            <li>Prioritized outreach list with contact strategies</li>
-                        </ul>
-                    </div>
-                    <div class="service-preview">
-                        <div class="health-analysis">
-                            <div class="health-header">
-                                <span style="font-size:12px;font-weight:600;color:#cbd5e1;">Customer Health Analysis</span>
-                                <span style="display:flex;align-items:center;gap:6px;font-size:10px;color:#64748b;"><span class="health-pulse"></span>Live</span>
-                            </div>
-                            <div class="health-table">
-                                <div class="health-table-header">
-                                    <span>Customer</span><span>Health</span><span>Dormant</span><span>At Risk $</span>
-                                </div>
-                                <div class="health-table-row">
-                                    <span>Metro Fresh Markets</span><span style="color:#ef4444;">23%</span><span>94 days</span><span style="color:#fbbf24;">$18,400</span>
-                                </div>
-                                <div class="health-table-row">
-                                    <span>Golden Harvest Foods</span><span style="color:#fbbf24;">51%</span><span>67 days</span><span style="color:#fbbf24;">$12,200</span>
-                                </div>
-                                <div class="health-table-row">
-                                    <span>Pacific Rim Imports</span><span style="color:#ef4444;">18%</span><span>112 days</span><span style="color:#ef4444;">$31,600</span>
-                                </div>
-                                <div class="health-table-row">
-                                    <span>Sunrise Grocery Co.</span><span style="color:#fbbf24;">44%</span><span>73 days</span><span style="color:#fbbf24;">$9,800</span>
-                                </div>
-                                <div class="health-table-row">
-                                    <span>Casa Verde Distributors</span><span style="color:#22c55e;">82%</span><span>12 days</span><span style="color:#64748b;">$2,100</span>
-                                </div>
-                            </div>
-                            <div class="health-summary">
-                                <div class="health-stat"><span class="health-stat-val count-val" data-count="142" style="color:#22c55e;">0</span><span class="health-stat-lbl">Healthy</span></div>
-                                <div class="health-stat"><span class="health-stat-val count-val" data-count="87" style="color:#fbbf24;">0</span><span class="health-stat-lbl">At Risk</span></div>
-                                <div class="health-stat"><span class="health-stat-val count-val" data-count="34" style="color:#ef4444;">0</span><span class="health-stat-lbl">Dormant</span></div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#diagnostic" class="service-link">Learn More &#8594;</a>
-                </div>
-
-                <!-- Service 2: Re-engagement Campaigns -->
-                <div class="service-card">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                <polyline points="22,6 12,13 2,6"/>
-                            </svg>
-                        </div>
-                        <h3>Re-engagement Campaigns</h3>
-                        <p class="service-description">Automated email sequences personalized for food buyers. Different messaging for seasonal customers vs truly dormant accounts. Monthly re-segmentation as buying patterns shift.</p>
-                        <ul class="service-features">
-                            <li>Personalized sequences based on product/ordering history</li>
-                            <li>Seasonal vs dormant customer differentiation</li>
-                            <li>Automated follow-up scheduling and tracking</li>
-                            <li>Campaign performance monitoring with response rates</li>
-                        </ul>
-                    </div>
-                    <div class="service-preview">
-                        <div style="background:linear-gradient(135deg,#0f172a,#1e293b);padding:16px;border-radius:8px;">
-                            <div style="font-size:12px;font-weight:600;color:#cbd5e1;margin-bottom:12px;">Campaign Segments</div>
-                            <div style="display:flex;gap:10px;margin-bottom:16px;">
-                                <div class="campaign-segment" style="flex:1;background:rgba(239,68,68,0.15);border-radius:6px;padding:10px;text-align:center;">
-                                    <div class="count-val" data-count="34" style="font-size:20px;font-weight:700;color:#ef4444;">0</div>
-                                    <div style="font-size:10px;color:#94a3b8;">Dormant</div>
-                                </div>
-                                <div class="campaign-segment" style="flex:1;background:rgba(251,191,36,0.15);border-radius:6px;padding:10px;text-align:center;">
-                                    <div class="count-val" data-count="87" style="font-size:20px;font-weight:700;color:#fbbf24;">0</div>
-                                    <div style="font-size:10px;color:#94a3b8;">Declining</div>
-                                </div>
-                                <div class="campaign-segment" style="flex:1;background:rgba(249,115,22,0.15);border-radius:6px;padding:10px;text-align:center;">
-                                    <div class="count-val" data-count="52" style="font-size:20px;font-weight:700;color:#f97316;">0</div>
-                                    <div style="font-size:10px;color:#94a3b8;">At Risk</div>
-                                </div>
-                            </div>
-                            <div style="display:flex;justify-content:space-between;padding-top:12px;border-top:1px solid rgba(255,255,255,0.08);">
-                                <div class="campaign-stat" style="text-align:center;">
-                                    <div class="count-val" data-count="347" style="font-size:18px;font-weight:700;color:#1B9AAA;">0</div>
-                                    <div style="font-size:10px;color:#64748b;">Sent</div>
-                                </div>
-                                <div class="campaign-stat" style="text-align:center;">
-                                    <div class="count-val" data-count="52" data-suffix="%" style="font-size:18px;font-weight:700;color:#22c55e;">0%</div>
-                                    <div style="font-size:10px;color:#64748b;">Opened</div>
-                                </div>
-                                <div class="campaign-stat" style="text-align:center;">
-                                    <div class="count-val" data-count="23" style="font-size:18px;font-weight:700;color:#fbbf24;">0</div>
-                                    <div style="font-size:10px;color:#64748b;">Reactivated</div>
-                                </div>
-                            </div>
-                            <!-- Email Flow -->
-                            <div style="margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.08);">
-                                <div style="font-size:10px;font-weight:600;color:#64748b;margin-bottom:8px;">Email Flow</div>
-                                <div class="email-step" style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
-                                    <div style="width:6px;height:6px;border-radius:50%;background:#22c55e;flex-shrink:0;"></div>
-                                    <div style="flex:1;font-size:10px;color:#cbd5e1;">Day 1: Reactivation Offer</div>
-                                    <div style="font-size:9px;color:#22c55e;">Sent</div>
-                                </div>
-                                <div class="email-step" style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
-                                    <div style="width:6px;height:6px;border-radius:50%;background:#1B9AAA;flex-shrink:0;"></div>
-                                    <div style="flex:1;font-size:10px;color:#cbd5e1;">Day 7: Follow-up</div>
-                                    <div style="font-size:9px;color:#1B9AAA;">Queued</div>
-                                </div>
-                                <div class="email-step" style="display:flex;align-items:center;gap:8px;">
-                                    <div style="width:6px;height:6px;border-radius:50%;background:#64748b;flex-shrink:0;"></div>
-                                    <div style="flex:1;font-size:10px;color:#cbd5e1;">Day 14: Special Offer</div>
-                                    <div style="font-size:9px;color:#64748b;">Pending</div>
-                                </div>
-                                <div style="margin-top:10px;height:4px;background:rgba(255,255,255,0.08);border-radius:2px;overflow:hidden;">
-                                    <div class="email-progress-fill" style="height:100%;width:38%;background:linear-gradient(90deg,#22c55e,#1B9AAA);border-radius:2px;"></div>
-                                </div>
-                                <div style="font-size:9px;color:#64748b;margin-top:4px;">38% complete — 132 of 347 emails delivered</div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#diagnostic" class="service-link">Learn More &#8594;</a>
-                </div>
-
-                <!-- Service 3: Supply Chain Visibility Dashboard (full width) -->
-                <div class="service-card full-width">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="10"/>
-                                <circle cx="12" cy="12" r="6"/>
-                                <circle cx="12" cy="12" r="2"/>
-                                <line x1="12" y1="2" x2="12" y2="4"/>
-                                <line x1="12" y1="20" x2="12" y2="22"/>
-                                <line x1="2" y1="12" x2="4" y2="12"/>
-                                <line x1="20" y1="12" x2="22" y2="12"/>
-                            </svg>
-                        </div>
-                        <h3>Supply Chain Visibility Dashboard</h3>
-                        <p class="service-description">Real-time view of your entire supply chain. Track supplier lead times, monitor price fluctuations, predict shortages before they hit. Stop finding out about problems when the truck doesn't show up.</p>
-                        <ul class="service-features">
-                            <li>Supplier performance scoring and reliability tracking</li>
-                            <li>Ingredient price monitoring with alert thresholds</li>
-                            <li>Lead time tracking across all vendors</li>
-                            <li>Shortage prediction based on ordering patterns and market data</li>
-                            <li>Alternative supplier suggestions when primary sources have issues</li>
-                        </ul>
-                    </div>
-                    <div class="service-preview">
-                        <div style="background:linear-gradient(135deg,#0f172a,#1e293b);padding:16px;border-radius:8px;">
-                            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
-                                <span style="font-size:12px;font-weight:600;color:#cbd5e1;">Supply Chain Monitor</span>
-                                <span style="display:flex;align-items:center;gap:6px;font-size:10px;color:#64748b;"><span class="health-pulse"></span>Live</span>
-                            </div>
-                            <!-- Supplier scores -->
-                            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px;">
-                                <div class="supplier-card" style="background:rgba(255,255,255,0.05);border-radius:8px;padding:12px;border-left:3px solid #22c55e;">
-                                    <div style="font-size:10px;color:#64748b;">Verde Farms</div>
-                                    <div class="count-val" data-count="94" data-suffix="%" style="font-size:18px;font-weight:700;color:#22c55e;">0%</div>
-                                    <div style="font-size:10px;color:#94a3b8;">Reliable</div>
-                                </div>
-                                <div class="supplier-card" style="background:rgba(255,255,255,0.05);border-radius:8px;padding:12px;border-left:3px solid #fbbf24;">
-                                    <div style="font-size:10px;color:#64748b;">Pacific Seafood</div>
-                                    <div class="count-val" data-count="87" data-suffix="%" style="font-size:18px;font-weight:700;color:#fbbf24;">0%</div>
-                                    <div style="font-size:10px;color:#94a3b8;">Reliable</div>
-                                </div>
-                                <div class="supplier-card" style="background:rgba(255,255,255,0.05);border-radius:8px;padding:12px;border-left:3px solid #22c55e;">
-                                    <div style="font-size:10px;color:#64748b;">Golden State Produce</div>
-                                    <div class="count-val" data-count="91" data-suffix="%" style="font-size:18px;font-weight:700;color:#22c55e;">0%</div>
-                                    <div style="font-size:10px;color:#94a3b8;">Reliable</div>
-                                </div>
-                            </div>
-                            <!-- Price alert -->
-                            <div class="price-alert-anim" style="background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.2);border-radius:6px;padding:10px 12px;margin-bottom:14px;display:flex;align-items:center;gap:10px;">
-                                <span style="font-size:16px;">&#9888;</span>
-                                <div>
-                                    <div style="font-size:11px;font-weight:600;color:#ef4444;">Price Alert: Avocado +18% this week</div>
-                                    <div style="font-size:10px;color:#94a3b8;">Consider switching to backup supplier (Valley Fresh Farms, $1.82/unit)</div>
-                                </div>
-                            </div>
-                            <!-- Lead time tracker -->
-                            <div style="font-size:10px;font-weight:600;color:#64748b;margin-bottom:8px;">Lead Time Tracker</div>
-                            <div style="display:flex;flex-direction:column;gap:6px;">
-                                <div class="lead-time-row" style="display:flex;align-items:center;gap:8px;">
-                                    <span style="font-size:10px;color:#cbd5e1;width:120px;">Verde Farms</span>
-                                    <div style="flex:1;height:6px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden;"><div class="lead-time-fill" style="width:40%;height:100%;background:#22c55e;border-radius:3px;"></div></div>
-                                    <span style="font-size:10px;color:#22c55e;">2 days</span>
-                                </div>
-                                <div class="lead-time-row" style="display:flex;align-items:center;gap:8px;">
-                                    <span style="font-size:10px;color:#cbd5e1;width:120px;">Pacific Seafood</span>
-                                    <div style="flex:1;height:6px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden;"><div class="lead-time-fill" style="width:75%;height:100%;background:#fbbf24;border-radius:3px;"></div></div>
-                                    <span style="font-size:10px;color:#fbbf24;">5 days</span>
-                                </div>
-                                <div class="lead-time-row" style="display:flex;align-items:center;gap:8px;">
-                                    <span style="font-size:10px;color:#cbd5e1;width:120px;">Sunrise Meats</span>
-                                    <div style="flex:1;height:6px;background:rgba(255,255,255,0.08);border-radius:3px;overflow:hidden;"><div class="lead-time-fill" style="width:90%;height:100%;background:#ef4444;border-radius:3px;"></div></div>
-                                    <span style="font-size:10px;color:#ef4444;">8 days (delayed)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#diagnostic" class="service-link">See the Dashboard &#8594;</a>
-                </div>
-
-                <!-- Service 4: Operations Command Center -->
-                <div class="service-card full-width">
-                    <div class="service-header">
-                        <div class="service-icon">
-                            <svg viewBox="0 0 24 24">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                                <line x1="8" y1="21" x2="16" y2="21"/>
-                                <line x1="12" y1="17" x2="12" y2="21"/>
-                                <path d="M6 8h.01"/>
-                                <path d="M10 8h8"/>
-                                <path d="M6 12h.01"/>
-                                <path d="M10 12h8"/>
-                            </svg>
-                        </div>
-                        <h3>Operations Command Center</h3>
-                        <p class="service-description">One screen shows everything: warehouse throughput, delivery status, customer health, open quotes, and inventory alerts. Problems become visible before they become expensive.</p>
-                        <ul class="service-features">
-                            <li>Real-time warehouse pick/pack/ship metrics</li>
-                            <li>Delivery status and on-time performance</li>
-                            <li>Customer health scores and churn alerts</li>
-                            <li>Inventory levels with reorder predictions</li>
-                            <li>Supply chain status at a glance</li>
-                        </ul>
-                    </div>
-                    <div class="service-preview">
-                        <div style="padding:16px;background:linear-gradient(135deg,#0f172a,#1e293b);border-radius:8px;">
-                            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
-                                <span style="font-size:12px;font-weight:600;color:#cbd5e1;">Operations Overview</span>
-                                <span style="display:flex;align-items:center;gap:6px;font-size:10px;color:#64748b;"><span class="health-pulse"></span>Live</span>
-                            </div>
-                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-                                <div class="ops-metric" style="background:rgba(255,255,255,0.05);border-radius:8px;padding:12px;border-left:3px solid #22c55e;">
-                                    <div style="font-size:10px;color:#64748b;">Cold Storage</div>
-                                    <div class="count-val" data-count="97.1" data-suffix="%" data-decimal="1" style="font-size:18px;font-weight:700;color:#22c55e;">0%</div>
-                                    <div style="font-size:10px;color:#94a3b8;">Compliance</div>
-                                </div>
-                                <div class="ops-metric" style="background:rgba(255,255,255,0.05);border-radius:8px;padding:12px;border-left:3px solid #1B9AAA;">
-                                    <div style="font-size:10px;color:#64748b;">Deliveries</div>
-                                    <div class="count-val" data-count="47" data-suffix="/52" style="font-size:18px;font-weight:700;color:#1B9AAA;">0/52</div>
-                                    <div style="font-size:10px;color:#94a3b8;">On-time today</div>
-                                </div>
-                                <div class="ops-metric" style="background:rgba(255,255,255,0.05);border-radius:8px;padding:12px;border-left:3px solid #fbbf24;">
-                                    <div style="font-size:10px;color:#64748b;">Pipeline</div>
-                                    <div class="count-val" data-count="284" data-prefix="$" data-suffix="K" style="font-size:18px;font-weight:700;color:#fbbf24;">$0K</div>
-                                    <div style="font-size:10px;color:#94a3b8;">Open quotes</div>
-                                </div>
-                                <div class="ops-metric" style="background:rgba(255,255,255,0.05);border-radius:8px;padding:12px;border-left:3px solid #ef4444;">
-                                    <div style="font-size:10px;color:#64748b;">Alerts</div>
-                                    <div class="count-val alert-indicator-pulse" data-count="2" style="font-size:18px;font-weight:700;color:#ef4444;">0</div>
-                                    <div style="font-size:10px;color:#94a3b8;">Supplier delays</div>
-                                </div>
-                            </div>
-                            <!-- Live status feed -->
-                            <div style="display:flex;flex-direction:column;gap:6px;margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.06);">
-                                <div style="font-size:10px;font-weight:600;color:#64748b;margin-bottom:2px;">Live Activity</div>
-                                <div class="ops-status-item" style="display:flex;align-items:center;gap:8px;font-size:10px;">
-                                    <div style="width:6px;height:6px;border-radius:50%;background:#22c55e;flex-shrink:0;"></div>
-                                    <span style="color:#cbd5e1;flex:1;">Warehouse Zone A: all picks complete</span>
-                                    <span style="color:#64748b;">2m ago</span>
-                                </div>
-                                <div class="ops-status-item" style="display:flex;align-items:center;gap:8px;font-size:10px;">
-                                    <div style="width:6px;height:6px;border-radius:50%;background:#fbbf24;flex-shrink:0;"></div>
-                                    <span style="color:#cbd5e1;flex:1;">Route 7: driver delayed, ETA 2:45 PM</span>
-                                    <span style="color:#64748b;">8m ago</span>
-                                </div>
-                                <div class="ops-status-item" style="display:flex;align-items:center;gap:8px;font-size:10px;">
-                                    <div style="width:6px;height:6px;border-radius:50%;background:#ef4444;flex-shrink:0;animation:pulse 2s infinite;"></div>
-                                    <span style="color:#cbd5e1;flex:1;">Low stock alert: Halal chicken thighs (18 cases)</span>
-                                    <span style="color:#64748b;">12m ago</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#diagnostic" class="service-link">See the Dashboard &#8594;</a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Free Report Lead Magnet -->
-    <section id="free-report" class="free-report">
-        <div class="container">
-            <div class="free-report-inner">
-                <h2>Free Customer Account Review</h2>
-                <p class="subtext">Not ready for the full diagnostic? Drop your info below and we'll reach out to schedule a quick call. We'll walk you through pulling a simple export from QuickBooks, Excel, or your ERP, and give you a free look at your customer accounts: who's active, who's slipping, and where the revenue gaps are.</p>
-
-                <form class="lead-form" id="leadForm" onsubmit="handleLeadCapture(event)">
-                    <div class="lead-form-row">
-                        <input type="text" id="leadFirst" placeholder="First Name" required>
-                        <input type="text" id="leadLast" placeholder="Last Name" required>
-                    </div>
-                    <input type="text" id="leadCompany" placeholder="Company Name" required>
-                    <input type="email" id="leadEmail" placeholder="Work Email" required>
-                    <button type="submit">Get My Free Account Review</button>
-                </form>
-                <p class="form-note" id="formNote">We'll email you within 24 hours to schedule a quick 15-minute call. No pressure, no pitch. Whether you work with us or not, the review is yours to keep.</p>
-                <p class="form-note" id="formSuccess" style="display:none;color:var(--signal-green);font-weight:600;font-size:15px;">✓ Got it! We'll email you shortly to schedule your free account review call.</p>
-
-                <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:20px;">
-                    <div style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--medium-gray);">
-                        <span style="color:var(--signal-green);font-weight:700;">✓</span> QuickBooks
-                    </div>
-                    <div style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--medium-gray);">
-                        <span style="color:var(--signal-green);font-weight:700;">✓</span> Excel / CSV
-                    </div>
-                    <div style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--medium-gray);">
-                        <span style="color:var(--signal-green);font-weight:700;">✓</span> Any ERP
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- $500 Diagnostic Offer -->
     <section id="diagnostic" class="diagnostic-offer">
@@ -2230,6 +1749,40 @@
         </div>
     </section>
 
+    <!-- Free Customer Account Review -->
+    <section id="free-report" class="free-report">
+        <div class="container">
+            <div class="free-report-inner">
+                <h2>Free Customer Account Review</h2>
+                <p class="subtext">Not ready for the full diagnostic? Drop your info below and we'll reach out to schedule a quick call. We'll walk you through pulling a simple export from QuickBooks, Excel, or your ERP, and give you a free look at your customer accounts: who's active, who's slipping, and where the revenue gaps are.</p>
+
+                <form class="lead-form" id="leadForm" onsubmit="handleLeadCapture(event)">
+                    <div class="lead-form-row">
+                        <input type="text" id="leadFirst" placeholder="First Name" required>
+                        <input type="text" id="leadLast" placeholder="Last Name" required>
+                    </div>
+                    <input type="text" id="leadCompany" placeholder="Company Name" required>
+                    <input type="email" id="leadEmail" placeholder="Work Email" required>
+                    <button type="submit">Get My Free Account Review</button>
+                </form>
+                <p class="form-note" id="formNote">We'll email you within 24 hours to schedule a quick 15-minute call. No pressure, no pitch. Whether you work with us or not, the review is yours to keep.</p>
+                <p class="form-note" id="formSuccess" style="display:none;color:var(--signal-green);font-weight:600;font-size:15px;">&#10003; Got it! We'll email you shortly to schedule your free account review call.</p>
+
+                <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:20px;">
+                    <div style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--medium-gray);">
+                        <span style="color:var(--signal-green);font-weight:700;">&#10003;</span> QuickBooks
+                    </div>
+                    <div style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--medium-gray);">
+                        <span style="color:var(--signal-green);font-weight:700;">&#10003;</span> Excel / CSV
+                    </div>
+                    <div style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--medium-gray);">
+                        <span style="color:var(--signal-green);font-weight:700;">&#10003;</span> Any ERP
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Mo's Bio -->
     <section id="about" class="about-section">
         <div class="container">
@@ -2260,97 +1813,16 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Frequently Asked Questions</h2>
-            </div>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        What if we don't use QuickBooks?
-                        <span class="faq-toggle">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">We work with any system that can export customer and order data: QuickBooks, NetSuite, SAP, Sage, or even spreadsheets. If you can export a CSV, we can analyze it.</div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Do we need to change our current systems?
-                        <span class="faq-toggle">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">No. We work on top of your existing systems. No migration, no ERP overhaul, no new software to install. We analyze your data export and deliver actionable results.</div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        What does the money-back guarantee actually mean?
-                        <span class="faq-toggle">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">If our diagnostic does not identify at least $50K in recoverable dormant revenue, you get a full $500 refund. No questions asked. We've never had to issue one.</div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How is this different from our ERP vendor?
-                        <span class="faq-toggle">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">ERP vendors manage your operations. We analyze your customer data to find revenue you are already losing. ERPs track what happened; we predict what is about to happen and help you prevent it.</div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        We're a specialty/ethnic food distributor. Does this work for us?
-                        <span class="faq-toggle">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">Especially well. Specialty and ethnic food distributors often have the highest recovery potential because buying patterns are more niche and harder to replace. We have deep experience analyzing supply chain and operations data for halal, kosher, Latin, and Asian specialty distributors. Community purchasing cycles, cultural seasonal demand, and multi-language customer bases all require a different approach than standard distribution models.</div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How long before we see results?
-                        <span class="faq-toggle">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-inner">The diagnostic takes 48 hours. Your 90-day playbook starts producing results within the first 30 days. Most clients see measurable revenue recovery by Month 2.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <h2>Your Data Is Already There. Let's Make It Work.</h2>
-            <p class="subtext">Every week your data sits unclean, AI can't help you. We fix the foundation first, then build automation that actually delivers. Two ways to start.</p>
-            <div class="final-cta-buttons">
-                <a href="#diagnostic" class="primary">$500 Data + Operations Diagnostic</a>
-                <a href="#free-report" class="secondary">Free Customer Account Review</a>
-            </div>
-            <p class="final-phone">Or call directly: <a href="tel:2018005490">(201) 800-5490</a></p>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <a href="/" class="footer-logo">
                     <img src="logo.png" alt="DeepLine Operations">
-                    <span>DeepLine Operations</span>
                 </a>
                 <ul class="footer-nav">
-                    <li><a href="/">Home</a></li>
                     <li><a href="#diagnostic">Diagnostic</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#free-report">Free Estimate</a></li>
                     <li><a href="/privacy.html">Privacy Policy</a></li>
                 </ul>
             </div>
@@ -2392,27 +1864,12 @@
                 }
             });
         }, { threshold: 0.1 });
-        document.querySelectorAll('.problem-card, .step-card, .service-card').forEach(function(card) {
+        document.querySelectorAll('.service-card').forEach(function(card) {
             card.style.opacity = '0';
             card.style.transform = 'translateY(20px)';
             card.style.transition = 'all 0.6s ease';
             staggerObserver.observe(card);
         });
-
-        // Result cards animation
-        var resultObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    entry.target.querySelectorAll('.result-card').forEach(function(card, index) {
-                        var delay = card.dataset.delay || index * 200;
-                        setTimeout(function() { card.classList.add('animate'); }, delay);
-                    });
-                    resultObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.2 });
-        var resultsSection = document.querySelector('.results');
-        if (resultsSection) resultObserver.observe(resultsSection);
 
         // ========== NAV SCROLL ==========
         var navEl = document.querySelector('nav');
@@ -2430,18 +1887,6 @@
                 scrollTicking = true;
             }
         }, { passive: true });
-
-        // ========== FAQ TOGGLE ==========
-        document.querySelectorAll('.faq-question').forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                var item = this.parentElement;
-                var isOpen = item.classList.contains('open');
-                // Close all
-                document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
-                // Open clicked if it was closed
-                if (!isOpen) item.classList.add('open');
-            });
-        });
 
         // ========== MOBILE MENU ==========
         var mobileBtn = document.querySelector('.mobile-menu');
@@ -2493,31 +1938,6 @@
         }, { threshold: 0.2 });
         document.querySelectorAll('.service-preview').forEach(function(p) { mockupObserver.observe(p); });
 
-        // ========== LEAD CAPTURE (Google Apps Script) ==========
-        function handleLeadCapture(e) {
-            e.preventDefault();
-            var firstName = document.getElementById('leadFirst').value.trim();
-            var lastName = document.getElementById('leadLast').value.trim();
-            var company = document.getElementById('leadCompany').value.trim();
-            var email = document.getElementById('leadEmail').value.trim();
-            if (!firstName || !lastName || !company || !email) return;
-
-            fetch('https://script.google.com/macros/s/AKfycbxH-0F_yuJve8Bvzf1WWqYc5Z0ptXRRktVCmLEEa-7Dbs3ear7cNESr6-Bmm8mQIJaZ/exec', {
-                method: 'POST',
-                headers: { 'Content-Type': 'text/plain' },
-                body: JSON.stringify({
-                    name: firstName + ' ' + lastName,
-                    email: email,
-                    tool: 'Food Distributor Free Account Review',
-                    _subject: 'New Lead: ' + firstName + ' ' + lastName + ' (' + company + ') - Free Account Review',
-                    message: firstName + ' ' + lastName + ' from ' + company + ' (' + email + ') requested a free customer account review from the food distributors landing page.'
-                })
-            }).catch(function() {});
-
-            document.getElementById('leadForm').style.display = 'none';
-            document.getElementById('formNote').style.display = 'none';
-            document.getElementById('formSuccess').style.display = 'block';
-        }
     </script>
 
 </body>
