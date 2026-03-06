@@ -11,16 +11,16 @@
     y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "vr7qncllbq");
     </script>
-    <title>DeepLine Operations - Revenue Recovery for Food Distributors</title>
+    <title>DeepLine Operations - Free Operations Audit for Food Distributors</title>
     <meta name="description"
-        content="Food distributors lose 34% of customers silently. DeepLine Operations finds your dormant accounts, recovers lost revenue, and builds a 90-day playbook. $500 diagnostic with money-back guarantee.">
+        content="Free operations diagnostic for food distributors. We map your sales, marketing, logistics, and admin processes, show you what can be automated, and give you a 90-day playbook. No charge, no obligation.">
     <meta name="author" content="Mo Roowala">
     <link rel="canonical" href="https://deeplineop.ai/food-distributors.html">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Revenue Recovery for Food Distributors | DeepLine Operations">
+    <meta property="og:title" content="Free Operations Audit for Food Distributors | DeepLine Operations">
     <meta property="og:description"
-        content="95% of AI projects fail because companies skip data cleanup. We fix your data first, then layer automation on top of processes that are actually ready. For food distributors doing $5M-$500M.">
+        content="Free operations audit: we walk through your sales, marketing, logistics, and admin processes, find every automation opportunity, and hand you the playbook. For food distributors doing $5M-$500M.">
     <meta property="og:image" content="https://deeplineop.ai/logo.png">
     <meta property="og:url" content="https://deeplineop.ai/food-distributors.html">
     <meta property="og:type" content="website">
@@ -28,9 +28,9 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Revenue Recovery for Food Distributors | DeepLine Operations">
+    <meta name="twitter:title" content="Free Operations Audit for Food Distributors | DeepLine Operations">
     <meta name="twitter:description"
-        content="95% of AI projects fail because companies skip data cleanup. We fix your data first, then layer automation on top of processes that are actually ready. For food distributors doing $5M-$500M.">
+        content="Free operations audit: we walk through your sales, marketing, logistics, and admin processes, find every automation opportunity, and hand you the playbook. For food distributors doing $5M-$500M.">
     <meta name="twitter:image" content="https://deeplineop.ai/logo.png">
 
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -43,7 +43,7 @@
       "name": "DeepLine Operations",
       "url": "https://deeplineop.ai",
       "logo": "https://deeplineop.ai/logo.png",
-      "description": "Revenue recovery specialists helping food distributors find and reactivate dormant customers through data analytics.",
+      "description": "Operations automation specialists helping food distributors audit processes and implement automation across sales, marketing, logistics, and admin.",
       "serviceArea": {
         "@type": "Place",
         "name": "United States"
@@ -69,12 +69,12 @@
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "DeepLine Operations",
-      "serviceType": "Revenue Recovery for Food Distributors",
+      "serviceType": "Operations Automation for Food Distributors",
       "provider": {
         "@type": "Organization",
         "name": "DeepLine Operations"
       },
-      "description": "Help food distributors recover 20-30% of dormant customer accounts through data analysis and automated reactivation campaigns.",
+      "description": "Free operations audit for food distributors: sales, marketing, logistics, and admin process mapping with automation roadmap and 90-day playbook.",
       "areaServed": {
         "@type": "Country",
         "name": "United States"
@@ -85,7 +85,7 @@
       },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Food Distributor Revenue Recovery Services",
+        "name": "Food Distributor Operations Audit Services",
         "itemListElement": [
           {
             "@type": "Offer",
@@ -107,9 +107,9 @@
       },
       "offers": {
         "@type": "Offer",
-        "name": "$500 Operations Diagnostic",
-        "description": "Complete operations audit for food distributors: customer health analysis, workflow audit, 90-day recovery roadmap, and ROI projections",
-        "price": "500",
+        "name": "Free Operations Diagnostic",
+        "description": "Complete operations audit for food distributors: sales, marketing, logistics, and admin process mapping with automation roadmap",
+        "price": "0",
         "priceCurrency": "USD"
       }
     }
@@ -856,25 +856,77 @@
             z-index: 2;
         }
 
-        .price-anchor {
-            color: #94a3b8;
-            font-size: 15px;
-            margin-bottom: 8px;
-            max-width: none;
-            margin-left: auto;
-            margin-right: auto;
+        /* price-anchor removed: single free offer */
+
+        .diagnostic-price-block {
+            margin-bottom: 16px;
+            position: relative;
         }
 
-        .price-anchor .strikethrough {
-            text-decoration: line-through;
+        .price-was {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
             color: #64748b;
+            margin-bottom: 2px;
         }
 
         .diagnostic-price {
-            font-size: 64px;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 8px;
+            font-size: 56px;
+            font-weight: 800;
+            color: #94a3b8;
+            margin-bottom: 4px;
+            line-height: 1;
+            display: inline-block;
+            position: relative;
+        }
+
+        .price-crossed {
+            position: relative;
+            display: inline-block;
+        }
+
+        .price-crossed::after {
+            content: '';
+            position: absolute;
+            left: -6px;
+            right: -6px;
+            top: 50%;
+            height: 4px;
+            background: #ef4444;
+            transform: rotate(-12deg);
+            border-radius: 2px;
+            box-shadow: 0 0 8px rgba(239, 68, 68, 0.4);
+        }
+
+        .price-now {
+            font-size: 72px;
+            font-weight: 800;
+            color: var(--signal-green);
+            line-height: 1;
+            letter-spacing: -0.03em;
+            text-shadow: 0 0 40px rgba(46, 204, 113, 0.3);
+            margin-bottom: 4px;
+        }
+
+        .price-label {
+            font-size: 15px;
+            font-weight: 600;
+            color: #94a3b8;
+            letter-spacing: 0.02em;
+        }
+
+        .urgency-note {
+            display: inline-block;
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.25);
+            color: #fbbf24;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 24px;
+            max-width: 420px;
         }
 
         .guarantee-badge {
@@ -1903,7 +1955,7 @@
             </a>
             <div class="nav-right">
                 <a href="tel:2018005490" class="nav-phone">(201) 800-5490</a>
-                <a href="#diagnostic" class="nav-cta">Claim Your Diagnostic</a>
+                <a href="#diagnostic" class="nav-cta">Get Your Free Diagnostic</a>
             </div>
             <button class="mobile-menu">&#9776;</button>
         </div>
@@ -1916,15 +1968,12 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badge">For Small &amp; Mid-Market Food Distributors &middot; $5M to $500M</div>
-                <h1>Your current staff is capable of 2x the volume. Watch us map your AI-driven 90 day plan (zero new
-                    hires) in 30 minutes.</h1>
-                <p class="hero-subtitle">No ERP Overhaul. No 6-figure 18-month timeline. No Complicated Tech. We fix
-                    processes for food distributors, then layer useful automation on top of systems that are actually
-                    ready for it.</p>
+                <h1>We'll Walk Through Your Sales, Logistics, and Admin Processes, Find Every Automation Opportunity, Then Hand You the Playbook.</h1>
+                <p class="hero-subtitle">No ERP Overhaul. No 6-figure 18-month timeline. No Complicated Tech. For food distributors doing $5M to $500M.</p>
                 <div class="hero-ctas">
-                    <a href="#diagnostic" class="hero-cta primary">Claim Your Diagnostic</a>
+                    <a href="#diagnostic" class="hero-cta primary">Get Your Free Diagnostic</a>
                 </div>
-                <p class="trust-line"><strong>100% money-back guarantee.</strong> No contracts. Results in 48 hours.</p>
+                <p class="trust-line"><strong>100% free. No strings attached.</strong> No contracts. Results in 48 hours.</p>
             </div>
         </div>
     </section>
@@ -1934,87 +1983,50 @@
         <div style="width: 100%; height: 1px; background-color: rgba(255, 255, 255, 0.15);"></div>
     </div>
 
-    <!-- $500 Diagnostic Offer -->
+    <!-- Free Diagnostic Offer -->
     <section id="diagnostic" class="diagnostic-offer">
         <div class="container">
             <div class="diagnostic-inner">
-                <p class="price-anchor">Consultants charge <span class="strikethrough">$5,000-$10,000</span> for this
-                    analysis</p>
-                <div class="diagnostic-price">$500</div>
-                <div class="guarantee-badge">&#10003; 100% Money-Back Guarantee</div>
-                <h2 style="color: white;">Your Complete Food Distribution Diagnostic</h2>
+                <div class="diagnostic-price-block">
+                    <div class="price-was">was</div>
+                    <div class="diagnostic-price"><span class="price-crossed">$500</span></div>
+                    <div class="price-now">FREE Diagnostic</div>
+                    <div class="price-label">Includes Automation Playbook</div>
+                </div>
+                <div class="guarantee-badge">&#10003; No charge. No obligation. Yours to keep.</div>
                 <div class="deliverables">
                     <div class="deliverable-item">
                         <span class="deliverable-check">&#10003;</span>
-                        <span class="deliverable-text">Customer Health Analysis: every account scored by risk level,
-                            last order date, and revenue trend</span>
+                        <span class="deliverable-text"><strong>Sales Process Audit:</strong> how leads come in, how quotes go out, where deals stall, and what's falling through the cracks</span>
                     </div>
                     <div class="deliverable-item">
                         <span class="deliverable-check">&#10003;</span>
-                        <span class="deliverable-text">Dormant Revenue Report: exact dollar amount at risk, broken down
-                            by customer segment</span>
+                        <span class="deliverable-text"><strong>Marketing + Outreach Map:</strong> customer reactivation opportunities, dormant account sizing, and campaign-ready segments</span>
                     </div>
                     <div class="deliverable-item">
                         <span class="deliverable-check">&#10003;</span>
-                        <span class="deliverable-text">Seasonal Pattern Map: buying cycles, peak ordering windows, and
-                            drop-off triggers</span>
+                        <span class="deliverable-text"><strong>Logistics + Fulfillment Review:</strong> routing, delivery scheduling, warehouse bottlenecks, and supplier lead time gaps</span>
                     </div>
                     <div class="deliverable-item">
                         <span class="deliverable-check">&#10003;</span>
-                        <span class="deliverable-text">90-Day Recovery Playbook: prioritized reactivation list with
-                            scripts and timing</span>
+                        <span class="deliverable-text"><strong>Backend + Admin Audit:</strong> invoicing, data entry, reporting, and every manual task eating up your team's hours</span>
                     </div>
                     <div class="deliverable-item">
                         <span class="deliverable-check">&#10003;</span>
-                        <span class="deliverable-text">ROI Projection: expected recovery amount based on your actual
-                            data, not industry averages</span>
+                        <span class="deliverable-text"><strong>Automation Roadmap:</strong> which processes are ready to automate now, which need cleanup first, and the exact order to tackle them</span>
+                    </div>
+                    <div class="deliverable-item">
+                        <span class="deliverable-check">&#10003;</span>
+                        <span class="deliverable-text"><strong>90-Day Implementation Playbook:</strong> step-by-step plan with timelines, expected ROI, and zero guesswork</span>
                     </div>
                 </div>
-                <a href="https://calendly.com/mo-deeplineop/30min" class="diagnostic-cta" target="_blank">Book Your
-                    Diagnostic Call</a>
+                <div class="urgency-note">&#9200; Limited time: complimentary through March 2026. After that, this diagnostic goes back to $500.</div>
+                <a href="https://calendly.com/mo-deeplineop/30min" class="diagnostic-cta" id="bookingCta" target="_blank" onclick="trackBookingClick()">Book Your Free Diagnostic Call</a>
             </div>
         </div>
     </section>
 
-    <!-- Free Customer Account Review -->
-    <section id="free-report" class="free-report">
-        <div class="container">
-            <div class="free-report-inner">
-                <h2>Free Customer Account Review</h2>
-                <p class="subtext">Not ready for the full diagnostic? Drop your info below and we'll reach out to
-                    schedule a quick call. We'll walk you through pulling a simple export from QuickBooks, Excel, or
-                    your ERP, and give you a free look at your customer accounts: who's active, who's slipping, and
-                    where the revenue gaps are.</p>
-
-                <form class="lead-form" id="leadForm" onsubmit="handleLeadCapture(event)">
-                    <div class="lead-form-row">
-                        <input type="text" id="leadFirst" placeholder="First Name" required>
-                        <input type="text" id="leadLast" placeholder="Last Name" required>
-                    </div>
-                    <input type="text" id="leadCompany" placeholder="Company Name" required>
-                    <input type="email" id="leadEmail" placeholder="Work Email" required>
-                    <button type="submit">Get My Free Account Review</button>
-                </form>
-                <p class="form-note" id="formNote">We'll email you within 24 hours to schedule a quick 15-minute call.
-                    No pressure, no pitch. Whether you work with us or not, the review is yours to keep.</p>
-                <p class="form-note" id="formSuccess"
-                    style="display:none;color:var(--signal-green);font-weight:600;font-size:15px;">&#10003; Got it!
-                    We'll email you shortly to schedule your free account review call.</p>
-
-                <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:20px;">
-                    <div style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--medium-gray);">
-                        <span style="color:var(--signal-green);font-weight:700;">&#10003;</span> QuickBooks
-                    </div>
-                    <div style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--medium-gray);">
-                        <span style="color:var(--signal-green);font-weight:700;">&#10003;</span> Excel / CSV
-                    </div>
-                    <div style="display:flex;align-items:center;gap:6px;font-size:13px;color:var(--medium-gray);">
-                        <span style="color:var(--signal-green);font-weight:700;">&#10003;</span> Any ERP
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Form section removed: single offer (free diagnostic) with calendar booking only -->
 
     <!-- Mo's Bio -->
     <section id="about" class="about-section">
@@ -2179,41 +2191,23 @@
         }, { threshold: 0.2 });
         document.querySelectorAll('.service-preview').forEach(function (p) { mockupObserver.observe(p); });
 
-        // ========== LEAD CAPTURE ==========
-        function handleLeadCapture(e) {
-            e.preventDefault();
-            const btn = e.target.querySelector('button[type="submit"]');
-            const firstName = document.getElementById('leadFirst').value.trim();
-            const lastName = document.getElementById('leadLast').value.trim();
-            const company = document.getElementById('leadCompany').value.trim();
-            const email = document.getElementById('leadEmail').value.trim();
-
-            if (!firstName || !lastName || !company || !email) return;
-
+        // ========== BOOKING CLICK TRACKING ==========
+        function trackBookingClick() {
+            // Clarity custom event
+            if (window.clarity) { window.clarity('event', 'booking_click'); }
+            // Also log to Google Sheets for backup tracking
             fetch('https://script.google.com/macros/s/AKfycbxH-0F_yuJve8Bvzf1WWqYc5Z0ptXRRktVCmLEEa-7Dbs3ear7cNESr6-Bmm8mQIJaZ/exec', {
                 method: 'POST',
                 headers: { 'Content-Type': 'text/plain' },
                 body: JSON.stringify({
-                    name: firstName + ' ' + lastName,
-                    email: email,
-                    tool: 'Free Customer Audit Form',
-                    company: company,
-                    _subject: 'New Lead: ' + firstName + ' ' + lastName + ' - Free Customer Audit Form',
-                    message: firstName + ' ' + lastName + ' (' + email + ') from ' + company + ' requested the Free Customer Audit Form.'
+                    name: 'Booking Click',
+                    email: '',
+                    tool: 'Free Diagnostic - Calendly Click',
+                    company: '',
+                    _subject: 'Booking Click: Free Diagnostic CTA',
+                    message: 'Someone clicked the Book Your Free Diagnostic Call button at ' + new Date().toISOString()
                 })
             }).catch(function () { });
-
-            if (btn) {
-                btn.textContent = 'Submitted';
-                btn.style.backgroundColor = 'var(--signal-green)';
-                btn.style.color = '#fff';
-            }
-
-            var formSuccess = document.getElementById('formSuccess');
-            if (formSuccess) formSuccess.style.display = 'block';
-
-            var formNote = document.getElementById('formNote');
-            if (formNote) formNote.style.display = 'none';
         }
     </script>
 
