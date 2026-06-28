@@ -177,14 +177,14 @@
         }
 
         h1 {
-            font-size: 48px;
+            font-size: clamp(1.85rem, 1.1rem + 3.4vw, 3rem);
             font-weight: 700;
             letter-spacing: -0.02em;
             line-height: 1.1;
         }
 
         h2 {
-            font-size: 32px;
+            font-size: clamp(1.5rem, 1.2rem + 1.4vw, 2rem);
             font-weight: 600;
             letter-spacing: -0.02em;
             line-height: 1.2;
@@ -347,6 +347,23 @@
                 linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
             background-size: 30px 30px;
+            animation: gridDrift 50s linear infinite;
+            will-change: background-position;
+        }
+
+        @keyframes gridDrift {
+            from { background-position: 0 0; }
+            to   { background-position: 30px 30px; }
+        }
+
+        @keyframes ambientPulse {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50%      { opacity: 0.85; transform: scale(1.04); }
+        }
+
+        @keyframes navDrop {
+            from { opacity: 0; transform: translateY(-8px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
 
         .hero-ambient {
@@ -373,6 +390,8 @@
                 radial-gradient(circle 1px at 80% 45%, rgba(27, 154, 170, 0.35) 0%, transparent 1px),
                 radial-gradient(circle 1px at 35% 55%, rgba(27, 154, 170, 0.25) 0%, transparent 1px);
             opacity: 0.7;
+            animation: ambientPulse 9s ease-in-out infinite;
+            will-change: opacity, transform;
         }
 
         .hero-content {
@@ -658,6 +677,47 @@
         }
 
 
+        /* ===== Diagnostic reveal animations (trigger on section .visible) ===== */
+        .price-now {
+            opacity: 0;
+            transform: scale(0.85);
+            transition: opacity 0.5s ease 0.15s, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s;
+        }
+
+        .diagnostic-offer.visible .price-now {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .price-crossed::after {
+            transform: rotate(-12deg) scaleX(0);
+            transform-origin: left center;
+            transition: transform 0.45s ease 0.45s;
+        }
+
+        .diagnostic-offer.visible .price-crossed::after {
+            transform: rotate(-12deg) scaleX(1);
+        }
+
+        .deliverable-item {
+            opacity: 0;
+            transform: translateX(-12px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .diagnostic-offer.visible .deliverable-item {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .diagnostic-offer.visible .deliverable-item:nth-child(1) { transition-delay: 0.20s; }
+        .diagnostic-offer.visible .deliverable-item:nth-child(2) { transition-delay: 0.30s; }
+        .diagnostic-offer.visible .deliverable-item:nth-child(3) { transition-delay: 0.40s; }
+        .diagnostic-offer.visible .deliverable-item:nth-child(4) { transition-delay: 0.50s; }
+        .diagnostic-offer.visible .deliverable-item:nth-child(5) { transition-delay: 0.60s; }
+        .diagnostic-offer.visible .deliverable-item:nth-child(6) { transition-delay: 0.70s; }
+
+
         /* ========== About / Bio ========== */
         .about-section {
             background: white;
@@ -805,16 +865,24 @@
                 display: none;
             }
 
+            .nav-right.nav-open {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 14px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--deep-purple-navy);
+                padding: 16px 40px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                box-shadow: 0 12px 24px rgba(15, 11, 46, 0.3);
+                animation: navDrop 0.25s ease;
+            }
+
             .mobile-menu {
                 display: block;
-            }
-
-            h1 {
-                font-size: 36px;
-            }
-
-            h2 {
-                font-size: 28px;
             }
 
             .hero {
@@ -871,12 +939,12 @@
                 padding: 16px;
             }
 
-            h1 {
-                font-size: 28px;
-            }
-
             .diagnostic-price {
                 font-size: 48px;
+            }
+
+            .price-now {
+                font-size: clamp(48px, 14vw, 72px);
             }
         }
 
@@ -915,8 +983,8 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badge">For Industrial &amp; MRO Distributors &middot; $5M to $75M</div>
-                <h1>Done-For-You AI Distributor Scaling Blueprint</h1>
-                <p class="hero-subtitle">We'll audit your Sales, Logistics, and Admin this week and hand you the step-by-step map to migrate your back office from manual chaos to AI-automation by next month. Gain efficiency in your operations so you can scale without adding headcount.</p>
+                <h1>Still Quoting, Invoicing, and Chasing Data by Hand?</h1>
+                <p class="hero-subtitle">We audit your sales, logistics, and admin this week &mdash; then hand you a step-by-step map to automate the manual work by next month. Scale without adding headcount.</p>
                 <div class="hero-ctas">
                     <a href="#diagnostic" class="hero-cta primary">Get Your Free Diagnostic</a>
                 </div>
@@ -968,7 +1036,7 @@
                         <span class="deliverable-text"><strong>90-Day Implementation Playbook:</strong> step-by-step plan with timelines, expected ROI, and zero guesswork</span>
                     </div>
                 </div>
-                <div class="urgency-note">&#9200; Limited time: complimentary through March 2026. After that, this diagnostic goes back to $500.</div>
+                <div class="urgency-note">&#9200; Every month you wait is another month of quoting, invoicing, and data entry done by hand &mdash; hours your team won't get back.</div>
                 <a href="https://calendly.com/mo-deeplineop/30min" class="diagnostic-cta" id="bookingCta" target="_blank" onclick="trackBookingClick()">Book Your Free Diagnostic Call</a>
             </div>
         </div>
@@ -1059,24 +1127,6 @@
         // Initialize hero as visible immediately
         document.querySelector('.hero').classList.add('visible');
 
-        // Staggered animation for cards
-        var staggerObserver = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry, index) {
-                if (entry.isIntersecting) {
-                    setTimeout(function () {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }, index * 100);
-                }
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.service-card').forEach(function (card) {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'all 0.6s ease';
-            staggerObserver.observe(card);
-        });
-
         // ========== NAV SCROLL ==========
         var navEl = document.querySelector('nav');
         var scrollTicking = false;
@@ -1098,51 +1148,26 @@
         var mobileBtn = document.querySelector('.mobile-menu');
         var navRight = document.querySelector('.nav-right');
         if (mobileBtn && navRight) {
-            mobileBtn.addEventListener('click', function () {
-                var isVisible = navRight.style.display === 'flex';
-                navRight.style.display = isVisible ? 'none' : 'flex';
-                navRight.style.flexDirection = 'column';
-                navRight.style.position = 'absolute';
-                navRight.style.top = '100%';
-                navRight.style.left = '0';
-                navRight.style.right = '0';
-                navRight.style.background = 'var(--deep-purple-navy)';
-                navRight.style.padding = '16px 40px';
-                navRight.style.borderTop = '1px solid rgba(255,255,255,0.1)';
+            mobileBtn.setAttribute('aria-expanded', 'false');
+            mobileBtn.setAttribute('aria-label', 'Toggle menu');
+            var setMenu = function (open) {
+                navRight.classList.toggle('nav-open', open);
+                mobileBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            };
+            mobileBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                setMenu(!navRight.classList.contains('nav-open'));
             });
-        }
-        // ========== MOCKUP ANIMATIONS ==========
-        function countUp(el) {
-            var target = parseFloat(el.dataset.count);
-            var prefix = el.dataset.prefix || '';
-            var suffix = el.dataset.suffix || '';
-            var decimals = parseInt(el.dataset.decimal) || 0;
-            var duration = 800;
-            var start = performance.now();
-            function update(now) {
-                var progress = Math.min((now - start) / duration, 1);
-                var eased = 1 - Math.pow(1 - progress, 3);
-                var current = eased * target;
-                el.textContent = prefix + current.toFixed(decimals) + suffix;
-                if (progress < 1) requestAnimationFrame(update);
-            }
-            requestAnimationFrame(update);
-        }
-
-        var mockupObserver = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('mockup-visible');
-                    // Trigger count-up on all count-val elements within
-                    var countEls = entry.target.querySelectorAll('.count-val');
-                    countEls.forEach(function (el, i) {
-                        setTimeout(function () { countUp(el); }, 100 + i * 80);
-                    });
-                    mockupObserver.unobserve(entry.target);
+            // Close on outside click or when a link is tapped
+            document.addEventListener('click', function (e) {
+                if (navRight.classList.contains('nav-open') && !navRight.contains(e.target) && e.target !== mobileBtn) {
+                    setMenu(false);
                 }
             });
-        }, { threshold: 0.2 });
-        document.querySelectorAll('.service-preview').forEach(function (p) { mockupObserver.observe(p); });
+            navRight.querySelectorAll('a').forEach(function (a) {
+                a.addEventListener('click', function () { setMenu(false); });
+            });
+        }
 
         // ========== BOOKING CLICK TRACKING ==========
         function trackBookingClick() {
