@@ -155,7 +155,7 @@
     swap(`<section class="sc-gate"><p class="eyebrow">Your teaser score</p><h2 tabindex="-1">${esc(A.first)}, ${esc(A.company)} scored <span class="sc-big">${R.overall}</span><span class="muted">/100</span></h2><p class="sc-band">${esc(R.band.label)}. ${esc(R.band.line)}</p>
       <div class="sc-teaser" aria-hidden="true">${R.subs.map(s => `<div><span>${s.label}</span><i><b style="width:${s.v}%"></b></i></div>`).join('')}</div>
       <p class="sc-sub">Your full report covers the 4 sub-scores with a diagnosis for each, the top 3 leaks at ${esc(A.company)} with the fix we\u2019d build, what manual work costs you a year, and a 90-day roadmap.</p>
-      <form class="lf" id="scForm" action="https://formsubmit.co/ajax/mo@deeplineop.ai" method="POST" novalidate>
+      <form class="lf" id="scForm" action="https://formsubmit.co/ajax/b0c9ee12bbba9c7de0d01880997a0cb3" method="POST" novalidate>
         <label for="scEmail">Work email</label>
         <div class="lf-row"><input type="email" id="scEmail" name="email" autocomplete="email" inputmode="email" placeholder="you@${esc((A.company || 'company').toLowerCase().replace(/[^a-z0-9]+/g, '') || 'company')}.com" required aria-describedby="scMsg"><button class="btn btn-primary" type="submit"><span class="spin" aria-hidden="true"></span><span class="lbl">Show my full report</span></button></div>
         <div class="hp" aria-hidden="true"><label for="scHp">Leave this empty</label><input type="text" id="scHp" name="_honey" tabindex="-1" autocomplete="off"></div>
