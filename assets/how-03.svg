@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 272" aria-hidden="true" focusable="false">
+<text x="0" y="12" class="k">ABUVTHEPAR · IVY, AS BUILT</text><text x="400" y="12" class="m" text-anchor="end">CASE 01</text>
+<line x1="0" y1="26" x2="400" y2="26" class="hl"/>
+<g class="nd"><rect x="0" y="44" width="112" height="28" rx="4"/><rect x="144" y="44" width="112" height="28" rx="4"/><rect x="288" y="44" width="112" height="28" rx="4"/></g>
+<g class="t" text-anchor="middle"><text x="56" y="62">Gmail</text><text x="200" y="62">Spreadsheets</text><text x="344" y="62">Purchase orders</text></g>
+<g class="ln"><path d="M56 72C56 98 200 90 200 116M200 72V116M344 72C344 98 200 90 200 116"/><path d="M200 162C200 186 47 182 47 208M200 162C200 186 149 184 149 208M200 162C200 186 251 184 251 208M200 162C200 186 353 182 353 208"/></g>
+<rect x="130" y="116" width="140" height="46" rx="6" class="acf"/>
+<text x="200" y="138" class="ivy" text-anchor="middle">Ivy</text><text x="200" y="153" class="ivy-s" text-anchor="middle">AI EMPLOYEE</text>
+<g class="nd"><rect x="0" y="208" width="94" height="28" rx="4"/><rect x="102" y="208" width="94" height="28" rx="4"/><rect x="204" y="208" width="94" height="28" rx="4"/><rect x="306" y="208" width="94" height="28" rx="4"/></g>
+<g class="t sm" text-anchor="middle"><text x="47" y="226">Call queue</text><text x="149" y="226">PO review</text><text x="251" y="226">Offers inbox</text><text x="353" y="226">Xero invoices</text></g>
+<text x="0" y="266" class="m">+ WEEKLY KPI RECAP · DRAFTS-ONLY TEAM ASSISTANT</text>
+</svg>

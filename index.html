@@ -159,21 +159,63 @@
 </section>
 
 <!-- PROCESS -->
-<section class="sec" id="how">
-  <div class="wrap sh">
+<section class="sec how" id="how">
+  <div class="wrap how-head">
     <h2 class="split-lines">Four steps. <span class="muted">Operator first, AI second.</span></h2>
-    <p>One setup fee, plus whatever your software costs to run. No retainer trap. Every engagement is scoped to return 10–30x the setup fee.<sup>*</sup></p>
+    <p class="how-note">One setup fee, plus whatever your software costs to run. No retainer trap. Every engagement is scoped to return 10–30x the setup fee.<sup>*</sup></p>
   </div>
-  <div class="wrap">
-    <ol class="cols4 steps">
-      <li><span class="mono step-n">01</span><h3>Diagnose</h3><p>It starts with the free Teardown: one workflow mapped live and a one-page plan. The paid AI Ops Audit then goes top-down: how work flows, where it breaks, and the SOPs that only live in people's heads. 47 questions across sales, marketing and back office.</p></li>
-      <li><span class="mono step-n">02</span><h3>Design</h3><p>The ideal system, on paper before anything gets built: highest-impact priorities first, guardrails on anything that touches customers or money, and a fixed scope.</p></li>
-      <li><span class="mono step-n">03</span><h3>Build &amp; integrate</h3><p>We connect your email, CRM, accounting and ops tools into one place, then deploy AI employees trained on your SOPs. Drafts-only where it matters.</p></li>
-      <li><span class="mono step-n">04</span><h3>Hand over &amp; train</h3><p>Your team learns it hands-on. You own the infrastructure: every login, file and pipeline. After that you pay only for the software you run.</p></li>
-    </ol>
-    <p class="process-example"><b>What that looked like at AbuvThePar:</b> We went in, mapped outreach, purchasing and invoicing, then built and integrated Ivy, one platform running the call queue, PO intake, the offers inbox and Xero invoicing for the same team. <a class="link" href="#proof">See the case studies →</a></p>
-    <p class="footnote"><sup>*</sup>A target every engagement is scoped against, not a guarantee. Results vary by business.</p>
+  <div class="how-pin" id="howPin">
+    <div class="how-sticky">
+      <div class="wrap how-grid">
+        <div class="how-nav">
+          <div class="how-tabs" role="tablist" aria-label="How an engagement works" id="howTabs">
+          <button role="tab" id="ht-1" aria-controls="hp-1" aria-selected="true" tabindex="0"><span class="mono">01</span><span class="ht-t">Diagnose</span></button>
+          <button role="tab" id="ht-2" aria-controls="hp-2" aria-selected="false" tabindex="-1"><span class="mono">02</span><span class="ht-t">Design</span></button>
+          <button role="tab" id="ht-3" aria-controls="hp-3" aria-selected="false" tabindex="-1"><span class="mono">03</span><span class="ht-t">Build &amp; integrate</span></button>
+          <button role="tab" id="ht-4" aria-controls="hp-4" aria-selected="false" tabindex="-1"><span class="mono">04</span><span class="ht-t">Hand over &amp; train</span></button>
+        </div>
+        <div class="how-meta mono" aria-hidden="true"><span><span id="howPos">01</span> / 04 · swipe the card</span><span class="how-prog"><i class="on"></i><i></i><i></i><i></i></span></div>
+        </div>
+        <div class="how-stage" id="howStage">
+          <span class="how-big" aria-hidden="true" id="howBig">01</span>
+          <div class="how-panel on" role="tabpanel" id="hp-1" aria-labelledby="ht-1" tabindex="0">
+            <svg class="dg" viewBox="0 0 400 296" role="img" aria-label="Example teardown: inquiry, quote, order, invoice, paid, with two leaks marked; then the 47-question AI Ops Audit across sales, marketing and back office">
+              <text x="0" y="12" class="k">FREE TEARDOWN · 1 WORKFLOW · 30 MIN</text><text x="400" y="12" class="m" text-anchor="end">EXAMPLE</text>
+              <line x1="0" y1="26" x2="400" y2="26" class="hl"/>
+              <g class="nd"><rect x="0" y="62" width="68" height="30" rx="4"/><rect x="83" y="62" width="68" height="30" rx="4"/><rect x="166" y="62" width="68" height="30" rx="4"/><rect x="249" y="62" width="68" height="30" rx="4"/><rect x="332" y="62" width="68" height="30" rx="4"/></g>
+              <g class="ln"><path d="M68 77H83M151 77H166M234 77H249M317 77H332"/></g>
+              <g class="t" text-anchor="middle"><text x="34" y="81">Inquiry</text><text x="117" y="81">Quote</text><text x="200" y="81">Order</text><text x="283" y="81">Invoice</text><text x="366" y="81">Paid</text></g>
+              <path d="M117 92V128M283 92V128" class="ln dash"/><circle cx="117" cy="92" r="3.5" class="acf"/><circle cx="283" cy="92" r="3.5" class="acf"/>
+              <text x="117" y="146" class="k" text-anchor="middle">re-keyed by hand</text><text x="283" y="146" class="k" text-anchor="middle">chased by email</text>
+              <line x1="0" y1="182" x2="400" y2="182" class="hl"/>
+              <text x="0" y="206" class="k">THEN · AI OPS AUDIT</text>
+              <g class="m2"><text x="0" y="232">Sales</text><text x="0" y="254">Marketing</text><text x="0" y="276">Back office + SOPs</text></g>
+              <text x="400" y="262" class="big" text-anchor="end">47</text><text x="400" y="284" class="m" text-anchor="end">QUESTIONS</text>
+            </svg>
+            <div class="how-copy"><h3>Diagnose</h3><p>It starts with the free Teardown: one workflow mapped live and a one-page plan. The paid AI Ops Audit then goes top-down: how work flows, where it breaks, and the SOPs that only live in people's heads. 47 questions across sales, marketing and back office.</p></div>
+          </div>
+          <div class="how-panel" role="tabpanel" id="hp-2" aria-labelledby="ht-2" tabindex="0">
+            <div class="dg dg-slot" role="img" aria-label="Example plan: three ranked priorities with impact bars, a guardrail that keeps AI on drafts with a person approving anything touching customers or money, and a fixed scope" data-src="assets/how-02.svg" style="aspect-ratio:400/304"></div>
+            <div class="how-copy"><h3>Design</h3><p>The ideal system, on paper before anything gets built: highest-impact priorities first, guardrails on anything that touches customers or money, and a fixed scope. You approve the plan before any work starts.</p></div>
+          </div>
+          <div class="how-panel" role="tabpanel" id="hp-3" aria-labelledby="ht-3" tabindex="0">
+            <div class="dg dg-slot" role="img" aria-label="Ivy as built for AbuvThePar: Gmail, spreadsheets and purchase orders feed Ivy, which runs the call queue, PO review, the offers inbox and Xero invoices" data-src="assets/how-03.svg" style="aspect-ratio:400/272"></div>
+            <dl class="how-nums">
+              <div><dt>outreach / wk</dt><dd>400 → <b>1,050</b></dd></div>
+              <div><dt>calls / wk</dt><dd>30 → <b>250</b></dd></div>
+              <div><dt>POs / wk</dt><dd>6 → <b>25–35</b></dd></div>
+            </dl>
+            <div class="how-copy"><h3>Build &amp; integrate</h3><p>We connect your email, CRM, accounting and ops tools into one place, then deploy AI employees trained on your SOPs. Drafts-only where it matters. At AbuvThePar that was Ivy: one platform running the call queue, PO intake, the offers inbox and Xero invoicing for the same team. <a class="link" href="#proof">See the case studies →</a></p></div>
+          </div>
+          <div class="how-panel" role="tabpanel" id="hp-4" aria-labelledby="ht-4" tabindex="0">
+            <div class="dg dg-slot" role="img" aria-label="After handover you own every login, file, pipeline and written SOP; you pay a setup fee once, then only the monthly software you run, with no retainer" data-src="assets/how-04.svg" style="aspect-ratio:400/252"></div>
+            <div class="how-copy"><h3>Hand over &amp; train</h3><p>Your team learns it hands-on, on the workflows each person owns. You own the infrastructure: every login, file and pipeline. After that you pay only for the software you run.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  <div class="wrap"><p class="footnote"><sup>*</sup>A target every engagement is scoped against, not a guarantee. Results vary by business.</p></div>
 </section>
 
 <!-- NIGHT SHIFT CONSOLE -->
@@ -211,27 +253,27 @@
 </section>
 
 <!-- OUTCOMES -->
-<section class="sec" id="outcomes">
-  <div class="wrap sh">
+<section class="sec oc" id="outcomes">
+  <div class="wrap oc-head">
     <h2 class="split-lines">Not "AI tools". <span class="muted">Business results you can point to.</span></h2>
-    <p>Tools without a system become shelfware. A designed system shows up in the numbers.</p>
   </div>
   <div class="wrap">
-    <div class="numbers">
-      <div class="num"><p class="num-k">Ivy · weekly outreach</p><div class="big"><span class="from">400 →</span> <span class="count" data-to="1050" data-format="comma">1,050</span></div><p>outreach touches a week, same team</p></div>
-      <div class="num"><p class="num-k">Ivy · weekly calls</p><div class="big"><span class="from">30 →</span> <span class="count" data-to="250">250</span></div><p>calls a week, no headcount added</p></div>
-      <div class="num"><p class="num-k">Ivy · purchase orders</p><div class="big"><span class="from">6 →</span> <span class="count" data-to="25">25</span>–<span class="count" data-to="35">35</span></div><p>purchase orders a week</p></div>
-      <div class="num"><p class="num-k">Bean2Bean · leakage</p><div class="big">~$<span class="count" data-to="1.8" data-dec="1">1.8</span><span class="from">K/yr</span></div><p>underbilling recovered from 35 price-book fixes</p></div>
+    <div class="oc-nums">
+      <div class="oc-n oc-n1"><p class="oc-k mono">Ivy · weekly outreach</p><div class="oc-big"><span class="from">400 →</span> <span class="count" data-to="1050" data-format="comma">1,050</span></div><p class="oc-c">outreach touches a week, same team</p></div>
+      <div class="oc-n"><p class="oc-k mono">Ivy · weekly calls</p><div class="oc-big"><span class="from">30 →</span> <span class="count" data-to="250">250</span></div><p class="oc-c">calls a week, no headcount added</p></div>
+      <div class="oc-n"><p class="oc-k mono">Ivy · purchase orders</p><div class="oc-big"><span class="from">6 →</span> <span class="count" data-to="25">25</span>–<span class="count" data-to="35">35</span></div><p class="oc-c">purchase orders a week</p></div>
+      <div class="oc-n"><p class="oc-k mono">Bean2Bean · leakage</p><div class="oc-big">~$<span class="count" data-to="1.8" data-dec="1">1.8</span>K<span class="unit">/yr</span></div><p class="oc-c">underbilling recovered from 35 price-book fixes</p></div>
     </div>
-    <ol class="oc-list">
-      <li><h3>Grow revenue, not payroll</h3><p>2–3× the volume with the same team. Ivy took weekly outreach from 400 to 1,050.</p></li>
-      <li><h3>Stop leaking money you already earned</h3><p>Billing errors, price drift, missed reorders and unpaid invoices get caught automatically. Bean2Bean recovered ~$1.8K/yr from price fixes alone.</p></li>
-      <li><h3>Turn existing customers into revenue</h3><p>Win-back, reorder and upsell campaigns to people who already buy from you. No new ad spend.</p></li>
-      <li><h3>Get the business out of your head</h3><p>Your SOPs live in the AI employee, not in you. The company runs without you, and it's worth more at exit.</p></li>
-      <li><h3>Decide on live numbers</h3><p>One dashboard pulls in sales, cash, pipeline and ops. No more Friday spreadsheet rebuilds.</p></li>
-      <li><h3>Never drop a lead or follow-up</h3><p>Every email, lead and request becomes tracked work with an owner and a next step.</p></li>
-      <li><h3>Onboard new hires in days</h3><p>The playbook is in the system. New people ask the AI before they ask you.</p></li>
-      <li><h3>Move faster than competitors</h3><p>Same-day quotes, proposals and campaigns, while they're still "getting back to you".</p></li>
+    <p class="oc-lede">Tools without a system become shelfware. A designed system shows up in the numbers.</p>
+    <ol class="oc-tiles">
+      <li><span class="mono">01</span><h3>Revenue, not payroll</h3><p>2–3× the volume with the same team.</p></li>
+      <li><span class="mono">02</span><h3>Stop the leaks</h3><p>Billing errors, price drift and unpaid invoices, caught automatically.</p></li>
+      <li><span class="mono">03</span><h3>Sell to who already buys</h3><p>Win-back and reorder campaigns. No new ad spend.</p></li>
+      <li><span class="mono">04</span><h3>Out of your head</h3><p>Your SOPs live in the system, not in you.</p></li>
+      <li><span class="mono">05</span><h3>Live numbers</h3><p>Sales, cash, pipeline and ops on one dashboard. No Friday spreadsheet rebuilds.</p></li>
+      <li><span class="mono">06</span><h3>No dropped follow-ups</h3><p>Every lead and request gets an owner and a next step.</p></li>
+      <li><span class="mono">07</span><h3>Hires ramp in days</h3><p>New people ask the system before they ask you.</p></li>
+      <li><span class="mono">08</span><h3>Same-day quotes</h3><p>While competitors are still "getting back to you".</p></li>
     </ol>
     <p class="footnote"><b>15–25 hrs/week</b> typically back for the owner and team.</p>
   </div>
@@ -282,78 +324,68 @@
 </section>
 
 <!-- PROOF -->
-<section class="sec proof" id="proof">
-  <div class="wrap sh">
+<section class="sec pf" id="proof">
+  <div class="wrap pf-head">
     <h2 class="split-lines">Real clients. <span class="muted">Real systems.</span></h2>
-    <p>In each case we went in, learned the operation, and integrated the system. Named with permission.</p>
+    <p class="pf-note">In each case we went in, learned the operation, and integrated the system. Named with permission.</p>
   </div>
-  <div class="strip-pin" id="stripPin">
-    <div class="strip" id="strip">
-      <article class="frame">
-        <div class="f-text">
-          <p class="f-n">Case 01 / 04 · AbuvThePar · built for a $50M+ Amazon operator</p>
-          <h3>Ivy: 2.6× outreach and 4–6× purchase orders, same team</h3>
-          <p class="f-hook">The team was running outreach, purchasing and invoicing out of spreadsheets and manual dialing. We built Ivy, one platform that runs the call queue, PO intake and review, the offers inbox and invoice creation (Xero).</p>
-          <div class="f-stats">
-            <div><b>400 → 1,050</b><span>outreach touches / week</span></div>
-            <div><b>30 → 250</b><span>calls / week</span></div>
-            <div><b>6 → 25–35</b><span>purchase orders / week</span></div>
-            <div><b>Same team</b><span>no headcount added</span></div>
-          </div>
-          <p class="f-tags">Call queue · PO intake + review · Offers inbox · Xero invoicing · Gmail · Weekly KPI recap · Drafts-only team AI assistant</p>
-        </div>
-        <figure class="f-media"><img src="assets/ivy-call-queue.webp" alt="Ivy brand outreach call queue (contact details redacted)" width="1600" height="900" loading="lazy" decoding="async"><figcaption>Ivy call queue. Contact details redacted.</figcaption></figure>
-      </article>
-      <article class="frame">
-        <div class="f-text">
-          <p class="f-n">Case 02 / 04 · Bean2Bean Coffee Co. · Jonathan Pastore, VP of Operations</p>
-          <h3>Wholesale orders, from messy email to QuickBooks</h3>
-          <p class="f-hook">Wholesale accounts email orders in shorthand, and invoices were keyed into QuickBooks by hand. We built Gmail order intake, a review dashboard that learns from every edit, a client ordering portal, and QuickBooks sync with price-book checks.</p>
-          <div class="f-stats">
-            <div><b>466</b><span>order-related emails processed in 30 days</span></div>
-            <div><b>82</b><span>customer portal accounts set up</span></div>
-            <div><b>35</b><span>price-book errors fixed</span></div>
-            <div><b>~$1.8K/yr</b><span>underbilling recovered</span></div>
-          </div>
-        </div>
-        <div class="f-media two">
-          <figure><img src="assets/b2b-review-dashboard.webp" alt="Bean2Bean wholesale order review dashboard (customer details redacted)" width="1400" height="1026" loading="lazy" decoding="async"><figcaption>Review dashboard. Customer details redacted.</figcaption></figure>
-          <figure><img src="assets/b2b-client-portal.webp" alt="Bean2Bean client portal with 'Fill my usual order' (prices redacted)" width="1022" height="796" loading="lazy" decoding="async"><figcaption>Client portal. Prices redacted.</figcaption></figure>
+  <div class="wrap pf-grid">
+    <div class="pf-track" id="pfTrack" role="region" aria-label="Case studies, 4 cards" tabindex="0">
+      <article class="pf-card pf-ivy" aria-labelledby="pf1">
+        <figure class="pf-media"><img src="assets/ivy-call-queue.webp" alt="Ivy brand outreach call queue (contact details redacted)" width="1600" height="900" loading="lazy" decoding="async"><figcaption class="mono">Ivy call queue · contact details redacted</figcaption></figure>
+        <div class="pf-body">
+          <p class="pf-k mono"><span>01</span> AbuvThePar · $50M+ Amazon operator</p>
+          <h3 id="pf1">Ivy: 2.6× outreach, same team</h3>
+          <dl class="pf-stats">
+            <div><dt>outreach / week</dt><dd><span class="from">400 →</span> 1,050</dd></div>
+            <div><dt>calls / week</dt><dd><span class="from">30 →</span> 250</dd></div>
+            <div><dt>purchase orders / week</dt><dd><span class="from">6 →</span> 25–35</dd></div>
+            <div><dt>no headcount added</dt><dd>Same team</dd></div>
+          </dl>
+          <details class="pf-build"><summary>Read the build</summary><p>The team was running outreach, purchasing and invoicing out of spreadsheets and manual dialing. We built Ivy, one platform that runs the call queue, PO intake and review, the offers inbox and invoice creation (Xero).</p><p class="pf-tags mono">Call queue · PO intake + review · Offers inbox · Xero invoicing · Gmail · Weekly KPI recap · Drafts-only team AI assistant</p></details>
         </div>
       </article>
-      <article class="frame frame-quote">
-        <blockquote>
-          <p>“He's also worked on automated ordering systems for our wholesale customers including custom portals for them to find out about other items we feature and add them to invoices seamlessly. He's a great resource for any growing small business.”</p>
-          <footer>Jonathan Pastore · VP of Operations, Bean2Bean Coffee Co.</footer>
-        </blockquote>
-      </article>
-      <article class="frame">
-        <div class="f-text">
-          <p class="f-n">Case 03 / 04 · KO Alliance · Kristen Olson</p>
-          <h3>A sponsorship ops engine</h3>
-          <p class="f-hook">A podcast and partnership business needed sponsors, fast. We built the machine: decks, contracts, lead lists, video sales letters, and a partnership-plan generator.</p>
-          <div class="f-stats one"><div><b>Deal closed</b><span>The Plantiva sponsorship closed and the contract was signed.</span></div></div>
-          <p class="f-tags">Pitch decks · Contracts + agreements · ICP lead lists · VSL library · Partnership-plan generator</p>
+      <article class="pf-card pf-b2b" aria-labelledby="pf2">
+        <figure class="pf-media pf-collage"><img src="assets/b2b-review-dashboard.webp" alt="Bean2Bean wholesale order review dashboard (customer details redacted)" width="1400" height="1026" loading="lazy" decoding="async"><img class="pf-sticker" src="assets/b2b-client-portal.webp" alt="Bean2Bean client portal with 'Fill my usual order' (prices redacted)" width="1022" height="796" loading="lazy" decoding="async"><figcaption class="mono">Review dashboard + client portal · redacted</figcaption></figure>
+        <div class="pf-body">
+          <p class="pf-k mono"><span>02</span> Bean2Bean Coffee Co.</p>
+          <h3 id="pf2">Email orders → QuickBooks</h3>
+          <dl class="pf-stats">
+            <div><dt>order emails in 30 days</dt><dd>466</dd></div>
+            <div><dt>portal accounts</dt><dd>82</dd></div>
+            <div><dt>price-book fixes</dt><dd>35</dd></div>
+            <div><dt>underbilling recovered</dt><dd>~$1.8K/yr</dd></div>
+          </dl>
+          <details class="pf-build"><summary>Read the build</summary><p>Wholesale accounts email orders in shorthand, and invoices were keyed into QuickBooks by hand. We built Gmail order intake, a review dashboard that learns from every edit, a client ordering portal, and QuickBooks sync with price-book checks.</p></details>
         </div>
-        <blockquote class="f-quote"><p>“Oh my God, I love this!”</p><footer>Kristen Olson, reacting to a deliverable</footer></blockquote>
       </article>
-      <article class="frame">
-        <div class="f-text">
-          <p class="f-n">Case 04 / 04 · NutraChurn · Cole Curtis</p>
-          <h3>Content that publishes itself</h3>
-          <p class="f-hook">A lean e-com brand that needed content and reporting without a content team. We built automated pipelines that keep publishing and keep the owner informed.</p>
-          <div class="f-stats">
-            <div><b>On autopilot</b><span>SEO articles &amp; backlinks</span></div>
-            <div><b>Weekly</b><span>automated owner report, every week</span></div>
-          </div>
-          <p class="f-tags">Automated SEO articles · Backlink pipeline · Static ads pipeline · Weekly owner report</p>
+      <article class="pf-card pf-ko" aria-labelledby="pf3">
+        <div class="pf-media pf-type"><blockquote><p>“Oh my God, I love this!”</p><footer class="mono">Kristen Olson, reacting to a deliverable</footer></blockquote></div>
+        <div class="pf-body">
+          <p class="pf-k mono"><span>03</span> KO Alliance · Kristen Olson</p>
+          <h3 id="pf3">A sponsorship ops engine</h3>
+          <dl class="pf-stats one"><div><dt>Plantiva sponsorship, contract signed</dt><dd>Deal closed</dd></div></dl>
+          <details class="pf-build"><summary>Read the build</summary><p>A podcast and partnership business needed sponsors, fast. We built the machine: decks, contracts, lead lists, video sales letters, and a partnership-plan generator.</p><p class="pf-tags mono">Pitch decks · Contracts + agreements · ICP lead lists · VSL library · Partnership-plan generator</p></details>
         </div>
-        <ol class="pipeline" aria-label="Pipeline steps"><li>Brief</li><li>Draft</li><li>Brand check</li><li>Publish</li><li>Backlinks</li><li>Owner report</li></ol>
       </article>
-      <article class="frame frame-end">
-        <h3>Your business could be case 05.</h3>
-        <a class="btn btn-primary btn-lg" href="https://calendly.com/mo-deeplineop/30min">Get your free Teardown <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+      <article class="pf-card pf-nc" aria-labelledby="pf4">
+        <div class="pf-media pf-type"><ol class="pf-pipe mono" aria-label="Pipeline steps"><li>Brief</li><li>Draft</li><li>Brand check</li><li>Publish</li><li>Backlinks</li><li>Owner report</li></ol></div>
+        <div class="pf-body">
+          <p class="pf-k mono"><span>04</span> NutraChurn · Cole Curtis</p>
+          <h3 id="pf4">Content that publishes itself</h3>
+          <dl class="pf-stats"><div><dt>SEO articles &amp; backlinks</dt><dd>On autopilot</dd></div><div><dt>automated owner report</dt><dd>Weekly</dd></div></dl>
+          <details class="pf-build"><summary>Read the build</summary><p>A lean e-com brand that needed content and reporting without a content team. We built automated pipelines that keep publishing and keep the owner informed.</p><p class="pf-tags mono">Automated SEO articles · Backlink pipeline · Static ads pipeline · Weekly owner report</p></details>
+        </div>
       </article>
+    </div>
+    <div class="pf-pos mono" aria-hidden="true"><span id="pfPos">01</span> / 04 · swipe <span class="pf-dash"><i class="on"></i><i></i><i></i><i></i></span></div>
+    <figure class="pf-quote">
+      <blockquote><p>“He's also worked on automated ordering systems for our wholesale customers including custom portals for them to find out about other items we feature and add them to invoices seamlessly. He's a great resource for any growing small business.”</p></blockquote>
+      <figcaption><span class="pf-av mono" aria-hidden="true">JP</span><span><b>Jonathan Pastore</b><span class="muted">Co-founder, Bean2Bean</span></span></figcaption>
+    </figure>
+    <div class="pf-end">
+      <p>Your business could be <span class="mono">case&nbsp;05.</span></p>
+      <a class="btn btn-primary btn-lg" href="https://calendly.com/mo-deeplineop/30min">Get your free Teardown <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
     </div>
   </div>
 </section>

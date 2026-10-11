@@ -43,8 +43,8 @@
     const systems = clamp(({ siloed: 25, partial: 52, connected: 80 })[A.data] + (has('crm') ? 6 : 0) + (has('accounting') ? 6 : 0) + ((has('drive') || has('chat')) ? 3 : 0) - (has('sheets') ? 10 : 0));
     const automation = clamp(({ none: 12, adhoc: 30, some: 58, integrated: 82 })[A.ai] + (A.data === 'connected' ? 6 : 0) - (A.sop <= 2 ? 6 : 0));
     const per = +A.hours / teamMid();
-    const leverage = per <= 1 ? 88 : per <= 2 ? 74 : per <= 4 ? 56 : per <= 7 ? 38 : per <= 12 ? 24 : 12;
-    const overall = Math.round((process + systems + automation + leverage) / 4);
+    const capacity = per <= 1 ? 88 : per <= 2 ? 74 : per <= 4 ? 56 : per <= 7 ? 38 : per <= 12 ? 24 : 12;
+    const overall = Math.round((process + systems + automation + capacity) / 4);
     const band = [...D.scoreBands].reverse().find(b => overall >= b.min);
     const lvl = v => v < 40 ? 'low' : v < 70 ? 'mid' : 'high';
     const Dg = D.diagnoses;
@@ -52,7 +52,7 @@
       { key: 'process', label: 'Process & SOPs', v: process, text: fill(Dg.process[lvl(process)], T) },
       { key: 'systems', label: 'Systems & data', v: systems, text: fill(Dg.systems[lvl(systems)], T) },
       { key: 'automation', label: 'Automation', v: automation, text: fill(Dg.automation[A.ai], T) },
-      { key: 'leverage', label: 'Team leverage', v: leverage, text: fill(Dg.leverage[lvl(leverage)], T) },
+      { key: 'capacity', label: 'Team capacity', v: capacity, text: fill(Dg.capacity[lvl(capacity)], T) },
     ];
     // money
     const annual = +A.hours * +A.cost * D.assumptions.weeksPerYear;

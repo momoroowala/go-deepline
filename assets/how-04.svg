@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 252" aria-hidden="true" focusable="false">
+<text x="0" y="12" class="k">YOU OWN IT</text><text x="400" y="12" class="m" text-anchor="end">AFTER HANDOVER</text>
+<line x1="0" y1="26" x2="400" y2="26" class="hl"/>
+<g class="acf"><rect x="0" y="52" width="8" height="8"/><rect x="0" y="88" width="8" height="8"/><rect x="0" y="124" width="8" height="8"/><rect x="0" y="160" width="8" height="8"/></g>
+<g class="t"><text x="20" y="61">Every login</text><text x="20" y="97">Every file</text><text x="20" y="133">Every pipeline</text><text x="20" y="169">Your SOPs, in writing</text></g>
+<path d="M0 74H184M0 110H184M0 146H184M0 182H184" class="hl"/>
+<line x1="208" y1="40" x2="208" y2="190" class="hl"/>
+<text x="228" y="56" class="k">SETUP FEE</text><rect x="228" y="68" width="40" height="7" rx="2" class="acf"/><text x="278" y="76" class="m">ONCE</text>
+<text x="228" y="114" class="k">SOFTWARE</text><path d="M228 129H400" class="ln dot"/><text x="228" y="150" class="m">MONTHLY · WHAT YOU RUN</text>
+<text x="228" y="182" class="t mono-s">NO RETAINER</text>
+<line x1="0" y1="210" x2="400" y2="210" class="hl"/>
+<text x="0" y="236" class="m">TRAINING · HANDS-ON · PER WORKFLOW OWNER</text>
+</svg>

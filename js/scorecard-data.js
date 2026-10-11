@@ -276,16 +276,16 @@ window.SCORECARD = {
       some: 'You have some automations running. The next step is connecting them into one system with guardrails, instead of a patchwork of zaps.',
       integrated: 'AI is already wired into your systems. The opportunity now is depth: more of your SOPs running through it, with tighter guardrails.',
     },
-    leverage: {
+    capacity: {
       low: '{hours} hours a week of manual admin across a team of {team} works out to about {perPerson} hours per person, every week. That\u2019s capacity you\u2019re paying for and not getting.',
       mid: 'About {perPerson} hours per person each week go to manual admin. That\u2019s manageable today, and the first thing to break when volume grows.',
-      high: 'Manual admin is light, at about {perPerson} hours per person each week. Your leverage now comes from growth work, not cleanup.',
+      high: 'Manual admin is light, at about {perPerson} hours per person each week. Your team\u2019s hours already go to growth work, not cleanup.',
     },
   },
 
   scoreBands: [
     { min: 0, label: 'Running on effort', line: 'The business works because people push it. The upside from a designed system is large.' },
-    { min: 40, label: 'Foundations in place', line: 'Some structure is there. The right system would turn it into real leverage.' },
+    { min: 40, label: 'Foundations in place', line: 'Some structure is there. The right system turns it into hours your team gets back.' },
     { min: 60, label: 'Ready to scale', line: 'Solid foundations. Integration and AI employees are the next multiplier.' },
     { min: 80, label: 'Ahead of the curve', line: 'You\u2019re ahead of most operators. The gains now are in depth and guardrails.' },
   ],

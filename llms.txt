@@ -44,7 +44,7 @@
 - NutraChurn: automated SEO article and backlink pipeline, static ads pipeline, weekly reporting
 
 ## Free resource
-- AI Ops Scorecard (https://deeplineop.ai/scorecard.html): 10 questions, about 3 minutes. Returns a score out of 100 with 4 sub-scores (Process & SOPs, Systems & data, Automation, Team leverage), the top 3 leaks with the fix we would build, the annual cost of manual work, and a 90-day roadmap. Calculated in the browser by a rules engine; no AI model reads the answers.
+- AI Ops Scorecard (https://deeplineop.ai/scorecard.html): 10 questions, about 3 minutes. Returns a score out of 100 with 4 sub-scores (Process & SOPs, Systems & data, Automation, Team capacity), the top 3 leaks with the fix we would build, the annual cost of manual work, and a 90-day roadmap. Calculated in the browser by a rules engine; no AI model reads the answers.
 
 ## Pages
 - Home: https://deeplineop.ai/

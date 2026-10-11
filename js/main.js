@@ -169,6 +169,60 @@
   const barCheck = () => { const a = top.getBoundingClientRect().bottom < innerHeight * .25, b = fin.getBoundingClientRect().top > innerHeight * .7; sticky.classList.toggle('show', a && b); };
   addEventListener('scroll', barCheck, { passive: true }); barCheck();
 
+  /* ---------- How it works: tabs (ARIA tablist, arrows/Home/End, swipe) ---------- */
+  const tabs = $$('#howTabs [role=tab]'), panels = $$('.how-panel'), howProg = $$('.how-prog i');
+  let howCur = 0, howGo = null;
+  const howSet = (i, focus) => {
+    i = Math.max(0, Math.min(tabs.length - 1, i));
+    if (focus) tabs[i].focus({ preventScroll: true });
+    if (i === howCur) return;
+    howCur = i;
+    tabs.forEach((t, k) => { t.setAttribute('aria-selected', k === i); t.tabIndex = k === i ? 0 : -1; });
+    panels.forEach((p, k) => p.classList.toggle('on', k === i));
+    howProg.forEach((p, k) => p.classList.toggle('on', k === i));
+    $('#howBig').textContent = $('#howPos').textContent = '0' + (i + 1);
+    const tl = $('#howTabs');
+    if (tl.scrollWidth > tl.clientWidth + 2) tl.scrollTo({ left: tabs[i].offsetLeft - tl.offsetLeft - parseFloat(getComputedStyle(tl).paddingLeft), behavior: RM ? 'auto' : 'smooth' });
+  };
+  const howPick = (i, focus) => { i = Math.max(0, Math.min(tabs.length - 1, i)); howGo ? (howGo(i), howSet(i, focus)) : howSet(i, focus); };
+  tabs.forEach((t, k) => t.addEventListener('click', () => howPick(k)));
+  $('#howTabs').addEventListener('keydown', e => {
+    const m = { ArrowRight: howCur + 1, ArrowDown: howCur + 1, ArrowLeft: howCur - 1, ArrowUp: howCur - 1, Home: 0, End: tabs.length - 1 };
+    if (!(e.key in m)) return;
+    e.preventDefault(); howPick(m[e.key], true);
+  });
+  {
+    const stage = $('#howStage'); let sx = 0, sy = 0, on = false;
+    stage.addEventListener('touchstart', e => { const t = e.touches[0]; sx = t.clientX; sy = t.clientY; on = true; }, { passive: true });
+    stage.addEventListener('touchend', e => {
+      if (!on) return; on = false;
+      const t = e.changedTouches[0], dx = t.clientX - sx, dy = t.clientY - sy;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.4) howPick(howCur + (dx < 0 ? 1 : -1));
+    }, { passive: true });
+  }
+
+  /* Diagrams 02-04 load after first paint (keeps the HTML small); slots reserve their size */
+  const loadDiagrams = () => $$('.dg-slot[data-src]').forEach(el => fetch(el.dataset.src).then(r => r.ok ? r.text() : Promise.reject(r.status)).then(t => { el.innerHTML = t; el.removeAttribute('data-src'); }).catch(() => {}));
+  if (document.readyState === 'complete') (window.requestIdleCallback || setTimeout)(loadDiagrams); else addEventListener('load', () => (window.requestIdleCallback || setTimeout)(loadDiagrams));
+
+  /* ---------- Proof: swipe-card position indicator ---------- */
+  {
+    const track = $('#pfTrack'), cards = $$('.pf-card', track), dash = $$('.pf-dash i'), pos = $('#pfPos');
+    let last = -1, raf = 0;
+    const upd = () => {
+      raf = 0;
+      const step = cards[1].offsetLeft - cards[0].offsetLeft || 1;
+      let i = Math.round(track.scrollLeft / step);
+      if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 4) i = cards.length - 1;
+      i = Math.max(0, Math.min(cards.length - 1, i));
+      if (i === last) return; last = i;
+      pos.textContent = '0' + (i + 1);
+      dash.forEach((d, k) => d.classList.toggle('on', k === i));
+    };
+    track.addEventListener('scroll', () => { raf || (raf = requestAnimationFrame(upd)); }, { passive: true });
+    upd();
+  }
+
   if (RM) return;
 
   /* ================= GSAP ================= */
@@ -212,7 +266,7 @@
 
   const below = () => {
     /* One consistent, quiet reveal per section header; no per-element choreography */
-    $$('.sec .sh, .pillars .sh').forEach(h => gsap.from(h, { opacity: 0, y: 10, duration: .4, ease: EASE, scrollTrigger: { trigger: h, start: 'top 92%', once: true } }));
+    $$('.sec .sh, .pillars .sh, .how-head, .oc-head, .pf-head').forEach(h => gsap.from(h, { opacity: 0, y: 10, duration: .4, ease: EASE, scrollTrigger: { trigger: h, start: 'top 92%', once: true } }));
     /* Outcomes: count-up is the moment */
     $$('.count').forEach(el => {
       const to = parseFloat(el.dataset.to), dec = +(el.dataset.dec || 0), comma = el.dataset.format === 'comma';
@@ -220,11 +274,17 @@
       gsap.to(o, { v: to, duration: .8, ease: 'power2.out', scrollTrigger: { trigger: el, start: 'top 95%', once: true },
         onUpdate: () => { el.textContent = dec ? o.v.toFixed(dec) : (comma ? Math.round(o.v).toLocaleString('en-US') : Math.round(o.v)); } });
     });
-    /* Proof: horizontal pin on desktop (no inner parallax) */
-    gsap.matchMedia().add('(min-width: 821px)', () => {
-      const strip = $('#strip');
-      const dist = () => strip.scrollWidth - strip.parentElement.clientWidth;
-      gsap.to(strip, { x: () => -dist(), ease: 'none', scrollTrigger: { trigger: '#stripPin', pin: true, scrub: .25, start: 'center center', end: () => '+=' + Math.round(dist() * 0.5), invalidateOnRefresh: true, anticipatePin: 1 } });
+    /* How it works (desktop): the step list stays put while the page scrolls through the four steps */
+    gsap.matchMedia().add('(min-width: 1024px)', () => {
+      const pin = $('#howPin'), sticky = pin.firstElementChild;
+      const per = () => Math.round(innerHeight * .36), top = () => sticky.getBoundingClientRect().top - pin.getBoundingClientRect().top;
+      pin.classList.add('is-pinned');
+      const size = () => { pin.style.height = (sticky.offsetHeight + 3 * per()) + 'px'; };
+      size();
+      const st = ScrollTrigger.create({ trigger: pin, start: () => 'top ' + (parseFloat(getComputedStyle(sticky).top) || 0) + 'px', end: () => '+=' + 3 * per(),
+        onRefreshInit: size, invalidateOnRefresh: true, onUpdate: self => howSet(Math.round(self.progress * 3)) });
+      howGo = i => { const y = st.start + i * per() + 1; lenis ? lenis.scrollTo(y, { duration: .6 }) : scrollTo({ top: y, behavior: 'smooth' }); };
+      return () => { howGo = null; pin.classList.remove('is-pinned'); pin.style.height = ''; };
     });
     /* Event: the faint date drifts, nothing else moves */
     gsap.fromTo('.ev-date', { xPercent: 4 }, { xPercent: -8, ease: 'none', scrollTrigger: { trigger: '#event', start: 'top bottom', end: 'bottom top', scrub: true } });

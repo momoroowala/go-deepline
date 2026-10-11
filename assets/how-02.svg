@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 304" aria-hidden="true" focusable="false">
+<text x="0" y="12" class="k">THE PLAN · ON PAPER FIRST</text><text x="400" y="12" class="m" text-anchor="end">EXAMPLE</text>
+<line x1="0" y1="26" x2="400" y2="26" class="hl"/>
+<text x="228" y="50" class="m">IMPACT</text>
+<g class="m"><text x="0" y="80">01</text><text x="0" y="124">02</text><text x="0" y="168">03</text></g>
+<g class="t"><text x="28" y="80">Order intake → invoice</text><text x="28" y="124">Follow-ups + reorders</text><text x="28" y="168">Weekly owner report</text></g>
+<rect x="228" y="72" width="172" height="7" rx="2" class="acf"/><rect x="228" y="116" width="116" height="7" rx="2" class="tf"/><rect x="228" y="160" width="64" height="7" rx="2" class="lf"/>
+<path d="M0 96H400M0 140H400M0 184H400" class="hl"/>
+<rect x="0.5" y="204.5" width="399" height="60" rx="4" class="guard"/>
+<text x="14" y="226" class="k">GUARDRAIL</text>
+<text x="14" y="244" class="t sm">Drafts only. A person approves anything</text><text x="14" y="258" class="t sm">that touches customers or money.</text>
+<text x="0" y="296" class="m">YOU SIGN OFF BEFORE THE BUILD</text>
+<rect x="290.5" y="280.5" width="109" height="22" rx="3" class="stamp"/><text x="345" y="295.5" class="t mono-s" text-anchor="middle">FIXED SCOPE</text>
+</svg>
