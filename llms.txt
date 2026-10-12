@@ -3,7 +3,7 @@
 > AI operations consultancy for small and growing businesses: operator first, AI second. Anyone can buy an AI subscription or make a new hire; neither fixes broken processes, and tools without a system become shelfware. Deepline Operations learns the business top-down, maps its processes and SOPs, designs the highest-impact system with guardrails, then builds and integrates the infrastructure (connected email, CRM, QuickBooks/Xero and ops tools, plus AI employees trained on the company's SOPs), which the client owns long-term. Jersey City, NJ.
 
 ## Process
-0. Free AI Ops Teardown: a free 30-minute call where we map one workflow live; the client leaves with a one-page plan showing what to automate first and its estimated return. It leads into the paid AI Ops Audit.
+0. AI Ops Teardown: a 30-minute call where we map one workflow live; the client leaves with a one-page plan showing what to automate first and its estimated return. It leads into the paid AI Ops Audit.
 1. Diagnose: the paid AI Ops Audit. Learn the business top-down: workflows, processes, SOPs (47 questions across sales, marketing and back office)
 2. Design: the ideal system, highest-impact priorities first, guardrails on anything touching customers or money, fixed scope
 3. Build & integrate: connect the systems, deploy AI employees trained on the client's SOPs (drafts-only where it matters)
@@ -35,7 +35,7 @@
 7. Custom software for home services and contractors: estimating and quote tools with margin checks, customer portals, QuickBooks sync
 
 ## Event
-- NJ AI Setup Day: Saturday, November 14, 2026, Jersey City area (venue announced to registrants). Systems set up live. Max 15 businesses. $500 early-bird, then $750 per seat. Reserve a seat: https://luma.com/e18kagfu
+- NJ AI Setup Day: Saturday, November 14, 2026, Jersey City area (venue sent to registered guests about 10 days before). Systems set up live. Max 15 businesses. First 5 seats $200, then $500. Reserve a seat: https://luma.com/e18kagfu
 
 ## Proof
 - Ivy (AbuvThePar, built for a $50M+ Amazon operator): weekly outreach 400 -> 1,050, calls 30 -> 250, purchase orders 6 -> 25-35, same team (no headcount added)
@@ -43,7 +43,7 @@
 - KO Alliance: sponsorship operations (decks, contracts, lead lists, VSLs, partnership-plan generator); the Plantiva sponsorship deal closed
 - NutraChurn: automated SEO article and backlink pipeline, static ads pipeline, weekly reporting
 
-## Free resource
+## Self-serve resource
 - AI Ops Scorecard (https://deeplineop.ai/scorecard.html): 10 questions, about 3 minutes. Returns a score out of 100 with 4 sub-scores (Process & SOPs, Systems & data, Automation, Team capacity), the top 3 leaks with the fix we would build, the annual cost of manual work, and a 90-day roadmap. Calculated in the browser by a rules engine; no AI model reads the answers.
 
 ## Pages
@@ -53,7 +53,7 @@
 
 ## Contact
 - Website: https://deeplineop.ai
-- Free AI Ops Teardown (30-minute call): https://calendly.com/mo-deeplineop/30min
+- AI Ops Teardown (30-minute call): https://calendly.com/mo-deeplineop/30min
 - Email: mo@deeplineop.ai
 - Phone: (201) 800-5490
 - Address: 75 Liberty Avenue, Jersey City, NJ 07306

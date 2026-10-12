@@ -163,7 +163,7 @@ window.SCORECARD = {
     accounting: {
       label: 'Accounting / bookkeeping', noun: 'firm', clients: 'clients', unit: 'engagements and closes',
       context: 'In accounting, capacity is the ceiling. Every hour spent chasing documents and recategorizing transactions is an hour of advisory work you can\u2019t sell.',
-      guardrail: 'Read-only access to client books until the review queue has proven itself. Every write-back is approved by a person, with a freeze switch.',
+      guardrail: 'Read-only access to client books until the review queue has proven itself. Every write-back is approved by a person, with a pause switch.',
       sinks: [
         { id: 'docs', label: 'Chasing client documents', leak: 'Staff chasing the same client documents every month', fix: 'A document-request engine with per-client checklists, scheduled reminders, and uploads filed and logged, so nobody chases by hand.', ex: 'b2b_portal', tools: ['email', 'drive'] },
         { id: 'categorize', label: 'Categorization & cleanup', leak: 'Recategorizing transactions the same way every month', fix: 'A review queue on top of {accounting} bank feeds: it suggests, a person approves, and it learns from every correction.', ex: 'b2b_orders', tools: ['accounting'] },
