@@ -35,7 +35,7 @@
 7. Custom software for home services and contractors: estimating and quote tools with margin checks, customer portals, QuickBooks sync
 
 ## Event
-- NJ AI Setup Day: Saturday, November 14, 2026, Jersey City area (venue sent to registered guests about 10 days before). Systems set up live. Max 15 businesses. First 5 seats $200, then $500. Reserve a seat: https://luma.com/e18kagfu
+- NJ AI Setup Day: Saturday, November 14, 2026, Jersey City area (venue sent to registered guests about 10 days before). Systems set up live. Max 15 businesses. First 5 seats $500, then $750. Reserve a seat: https://luma.com/e18kagfu
 
 ## Proof
 - Ivy (AbuvThePar, built for a $50M+ Amazon operator): weekly outreach 400 -> 1,050, calls 30 -> 250, purchase orders 6 -> 25-35, same team (no headcount added)
